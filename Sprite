@@ -4,6 +4,9 @@ public final class Sprite{
   private int y;
   public int[] pixeles;
   private final HojaSprites hoja;
+  ///Coleccion de Sprites
+  
+  ///Fin de la coleccion
   public Sprite(final int lado, final int columna, final int fila, final HojaSprites hoja){
     this.lado = lado;
     pixeles = new int[lado * lado];
