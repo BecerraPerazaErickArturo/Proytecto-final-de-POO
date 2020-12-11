@@ -1,14 +1,17 @@
-package Juego;
 import java.awt.Canvas;
 import java.awt.Dimension;
 import java.swing.JFrame;
 
-public class Juego extends Canvas{
+public class Juego extends Canvas implements Runnable{
   private static final long serialVersionUID = 1L;
   private static final int Ancho = 800;
   private static final int Largo = 600;
+  private static volatile boolean enFuncionamiento = false;
   private static final String NOMBRE = "MATH OR DIE";
+  private static int aps = 0;
+  private static int pfs = 0;
   private static JFrame ventana;
+  private static Thread thread;
   private Juego(){
     setPreferredSize(new Dimensions(Ancho, Largo));
     ventana = new JFrame(NOMBRE);
@@ -22,5 +25,52 @@ public class Juego extends Canvas{
   }
   public static void main(String[] args){
     Juego juego = new Juego();
+    juego.iniciar();
+  }
+  private synchronized void iniciar(){
+    enFuncionamiento = true;
+    thread = new Thread(this, "Graficos");
+    thread.start();
+  }
+  private synchronized void detener(){
+    enFuncionamiento = false;
+    try{
+      thread.join();
+    }catch(InterruptedException e){
+      e.printStackTrace();
+    }
+  }
+  private void actualizar(){
+    aps++;
+  }
+  private void mostrar(){
+    fps++;
+  }
+  @Override
+  public void run(){
+    final int NSxS = 1000000000;
+    final byte APS = 60;
+    final double NSxAPS = NSxS/APS;
+    long referenciaActualizacion = System.nanoTime();
+    long referenciaContador = System.nanoTime();
+    double tiempoTranscurrido;
+    double delta = 0;
+    while(enFuncionamiento){
+      final long inicioBucle = System.nanoTime();
+      tiempoTranscurrido = inicioBucle - referenciaActualizacion;
+      referenciaActualizacion = inicioBucle;
+      delta += tiempoTranscurrido/NSxAPS;
+      while(delta >= 1){
+        actualizar();
+        delta--;
+      }
+      mostrar();
+      if(System.nanoTime() - referenciaContador > NSxS){
+        ventana.setTitle(NOMBRE + " || APS: " + aps + " || FPS: " + fps);
+        aps = 0;
+        fps = 0;
+        refrenciaContador = System.nanoTime();
+      }
+    }
   }
 }
