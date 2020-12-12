@@ -2,8 +2,8 @@
 //package mapa;
 
 public abstract class Mapa{
-  private int ancho;
-  private int largo; //alto
+  protected int ancho;
+  protected int largo; //alto
   private int[] cuadros; 
   
   public Mapa(int ancho, int largo){
