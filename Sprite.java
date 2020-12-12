@@ -1,12 +1,16 @@
+//package graficos;
+
 public final class Sprite{
   private final int lado;
   private int x;
   private int y;
   public int[] pixeles;
   private final HojaSprites hoja;
+  
   ///Coleccion de Sprites
-  public static Sprite nom = new Sprite(32, 0, 0, HojaSprites.mapa);
+  public static final Sprite NOM = new Sprite(32, 0, 0, HojaSprites.mapa);
   ///Fin de la coleccion
+  
   public Sprite(final int lado, final int columna, final int fila, final HojaSprites hoja){
     this.lado = lado;
     pixeles = new int[lado * lado];
