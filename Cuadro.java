@@ -12,7 +12,7 @@ public abstract class Cuadro{
   
   //coleccion de cuadros
   public static final Cuadro VACIO = new CuadroVacio(Sprite.VACIO);
-  public static final Cuadro ASFALTO = new CuadroAsfalto(Sprite.nom);
+  public static final Cuadro ASFALTO = new CuadroAsfalto(Sprite.ASFALTO);
   //fin coleccion
   
   public Cuadro(Sprite sprite){
