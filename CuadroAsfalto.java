@@ -2,6 +2,18 @@
 //video 17
 //package mapa.cuadro;
 
-public class CuadroAsfalto{
+import graficos.Pantalla;
+import graficos.Sprite;
+
+public class CuadroAsfalto extend Cuadro{
+  
+  public CuadroAsfalto(Sprite sprite){
+    super(sprite);
+  } 
+  
+  public void mostrar(int x, int y, Pantalla pantalla){
+  }
+  
+  
 
 }
