@@ -4,7 +4,7 @@
 public abstract class Mapa{
   protected int ancho;
   protected int largo; //alto
-  private int[] cuadros; 
+  protected int[] cuadros; 
   
   public Mapa(int ancho, int largo){
     this.ancho=ancho;
