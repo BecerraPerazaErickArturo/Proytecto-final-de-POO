@@ -30,7 +30,10 @@ public abstract class Mapa{
   }
   
   public void mostrar(int compensacionX, int compensacionY, Pantalla pantalla){
-  
+    int o = compensacionX / 32;
+    int e = (compensacionX + ) / 32;
+    int n = compensacionY;
+    int s;
   }
   
 }
