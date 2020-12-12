@@ -90,7 +90,6 @@ public class Juego extends Canvas implements Runnable{
       return;
     }
     pantalla.limpiar();
-    pantalla.mostrar(x, y);
     System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.lenght);
     Graphics g = estrategia.getDrawGrafics();
     g.drawImage(imagen, 0, 0, getWidth(), getHeight(), null);
