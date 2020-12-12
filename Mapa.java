@@ -17,7 +17,7 @@ public abstract class Mapa{
     cargarMapa(ruta);
   }
   
-  private void generarMapa(){
+  protected void generarMapa(){
   
   }
   
