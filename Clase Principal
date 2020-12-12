@@ -3,7 +3,19 @@ import javax.swing.*;
 import graficos.Pantalla;
 import control.Teclado;
 
+//faltaban imports asi que aqui los agrego
+import java.awt.BorderLayout;
+import java.awt.Canvas;
+import java.awt.Dimensions;
+import java.awt.Graphics;
+import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.awt.DataBufferInt;
+import java.swing.ImageIcon;
+import java.swing.JFrame;
+
 public class Juego extends Canvas implements Runnable{
+
   private static final long serialVersionUID = 1L;
   private static final int Ancho = 800;
   private static final int Largo = 600;
@@ -19,6 +31,10 @@ public class Juego extends Canvas implements Runnable{
   private static Pantalla pantalla;
   private static BufferedImage = new BufferedImage(Ancho, Largo, BufferedImage.TYPE_INT_RGB);
   private static int[] pixeles = ((DataBufferInt) imagen.getRaster().getDataBuffer()).getData();
+  
+  private static final ImageIcon icono = new ImageIcon(Juego.class.getResource(//ruta de foto icono//)); 
+  
+  
   private Juego(){
     setPreferredSize(new Dimension(Ancho, Largo));
     pantalla = new Pantalla(Ancho, Largo)
@@ -27,6 +43,7 @@ public class Juego extends Canvas implements Runnable{
     ventana = new JFrame(NOMBRE);
     ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     ventana.setResizable(false);
+    ventana.setIconImage(icono.getImage());
     ventana.setLayout(new BorderLayout());
     ventana.add(this.BorderLayout.CENTER);
     ventana.pack();
