@@ -4,7 +4,33 @@
 public class Mapa{
   private int ancho;
   private int largo; //alto
+  private int[] cuadros; 
   
-  private int[] cuadros; //tiles
+  public Mapa(int ancho, int largo){
+    this.ancho=ancho;
+    this.largo=largo;  
+    cuadros = new int[ancho*largo];
+    generarMapa();
+  }
+  
+  public Mapa(String ruta){
+    cargarMapa(ruta);
+  }
+  
+  private void generarMapa(){
+  
+  }
+  
+  private void cargarMapa(String ruta){
+  
+  }
+  
+  public void actualizar(){
+  
+  }
+  
+  public void mostrar(int comp){
+  
+  }
   
 }
