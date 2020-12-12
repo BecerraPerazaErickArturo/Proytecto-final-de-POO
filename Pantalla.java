@@ -37,7 +37,7 @@ public final class Pantalla{
   //fin temporal
   
   public void mostrarCuadro(int compensacionX, in compensacionY, Cuadro cuadro){
-    for(int y=0; y<){
+    for(int y=0; y< cuadro.sprite.lado){
     }
   }
 }
