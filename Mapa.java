@@ -1,7 +1,7 @@
 //este es del video 15 
 //package mapa;
 
-public class Mapa{
+public abstract class Mapa{
   private int ancho;
   private int largo; //alto
   private int[] cuadros; 
@@ -29,7 +29,7 @@ public class Mapa{
   
   }
   
-  public void mostrar(int comp){
+  public void mostrar(int compensacionX, int compensacionY, Pantalla pantalla){
   
   }
   
