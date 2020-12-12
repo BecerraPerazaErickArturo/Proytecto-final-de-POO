@@ -47,5 +47,10 @@ public final class Pantalla{
       }
     }
   }
-  
+  public int getAncho(){
+    return ancho;
+  }
+  public inr getLargo(){
+    return largo;
+  }
 }
