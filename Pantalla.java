@@ -1,3 +1,5 @@
+import cuadro;
+
 public final class Pantalla{
   private final int ancho;
   private final int largo;
@@ -12,6 +14,8 @@ public final class Pantalla{
       pixeles[i] = 0;
     }
   }
+  
+  //temporal
   public void mostrar(final int compX, final int compY){
     for(y = 0; y < largo; y++){
       int posicionY = y + compY;
@@ -23,8 +27,17 @@ public final class Pantalla{
         if(posicionX < 0 || posicionX >= ancho){
           continue;
         }
-        \\\pixeles[posicionX + posicionY * ancho] = Sprite.nom.pixeles[];
+        
+        //temporal
+        //pixeles[posicionX + posicionY * ancho] = Sprite.nom.pixeles[];
+        pixeles[posicionX + posicionY * ancho] = Sprite.nom.pixeles[(x& MASCARA_SPRITE)+(y&MASCARA_SPRITE) * LADO_SPRITE];
       }
+    }
+  }
+  //fin temporal
+  
+  public void mostrarCuadro(int compensacionX, in compensacionY, Cuadro cuadro){
+    for(int y=0; y<){
     }
   }
 }
