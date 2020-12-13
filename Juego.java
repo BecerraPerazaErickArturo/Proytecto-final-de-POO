@@ -29,6 +29,7 @@ public class Juego extends Canvas implements Runnable{
   private static Thread thread;
   private static Teclado teclado;
   private static Pantalla pantalla;
+  private static Mapa mapa;
   private static BufferedImage = new BufferedImage(Ancho, Largo, BufferedImage.TYPE_INT_RGB);
   private static int[] pixeles = ((DataBufferInt) imagen.getRaster().getDataBuffer()).getData();
   
@@ -37,7 +38,8 @@ public class Juego extends Canvas implements Runnable{
   
   private Juego(){
     setPreferredSize(new Dimension(Ancho, Largo));
-    pantalla = new Pantalla(Ancho, Largo)
+    pantalla = new Pantalla(Ancho, Largo);
+    mapa = new MapaGenerado(128, 128);
     teclado = new Teclado();
     addKeyListener(teclado);
     ventana = new JFrame(NOMBRE);
@@ -70,16 +72,16 @@ public class Juego extends Canvas implements Runnable{
   private void actualizar(){
     teclado.actualizar();
     if(teclado.arriba){
-      y++;
-    }
-    if(teclado.abajo){
       y--;
     }
+    if(teclado.abajo){
+      y++;
+    }
     if(teclado.izquierda){
-      x++;
+      x--;
     }
     if(teclado.derecha){
-      x--;
+      x++;
     }
     aps++;
   }
@@ -90,6 +92,7 @@ public class Juego extends Canvas implements Runnable{
       return;
     }
     pantalla.limpiar();
+    mapa.mostrar(X, Y, pantalla);
     System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.lenght);
     Graphics g = estrategia.getDrawGrafics();
     g.drawImage(imagen, 0, 0, getWidth(), getHeight(), null);
