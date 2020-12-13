@@ -30,6 +30,7 @@ public abstract class Mapa{
   }
   
   public void mostrar(final int compensacionX, final int compensacionY, final Pantalla pantalla){
+    pantalla.establecerDiferencia(compensacionX, compensacionY);
     int o = compensacionX >> 5;
     int e = (compensacionX + pantalla.getAncho()) >> 5;
     int n = compensacionY >> 5;
