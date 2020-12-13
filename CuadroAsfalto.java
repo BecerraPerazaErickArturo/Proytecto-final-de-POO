@@ -1,8 +1,4 @@
-//si quieres luego le cambiamos el nombre de la clase
-//video 17
-//package mapa.cuadro;
-
-import graficos.Pantalla;
+package mapa.cuadro;
 import graficos.Sprite;
 
 public class CuadroAsfalto extends Cuadro{
