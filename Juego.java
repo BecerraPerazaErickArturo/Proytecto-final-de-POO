@@ -21,6 +21,9 @@ public class Juego extends Canvas implements Runnable{
   private static final int Largo = 600;
   private static volatile boolean enFuncionamiento = false;
   private static final String NOMBRE = "MATH OR DIE";
+  private static final String CONTADOR_FPS = "";
+  private static final String CONTADOR_APS = "";
+
   private static int aps = 0;
   private static int fps = 0;
   private static x = 0;
@@ -72,6 +75,7 @@ public class Juego extends Canvas implements Runnable{
   }
   private void actualizar(){
     teclado.actualizar();
+    
     if(teclado.arriba){
       y--;
     }
@@ -83,6 +87,9 @@ public class Juego extends Canvas implements Runnable{
     }
     if(teclado.derecha){
       x++;
+    }
+    if(teclado.salir){
+      System.exit(0);
     }
     aps++;
   }
@@ -97,6 +104,11 @@ public class Juego extends Canvas implements Runnable{
     System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.lenght);
     Graphics g = estrategia.getDrawGrafics();
     g.drawImage(imagen, 0, 0, getWidth(), getHeight(), null);
+    //g.setColor(Color.white); pal cuadro
+    //g.fill noseque
+    g.drawString(CONTADOR_APS, 10, 20);
+    g.drawString(CONTADOR_FPS, 10, 35);
+    
     g.dispose();
     estrategia.show();
     fps++;
@@ -121,6 +133,8 @@ public class Juego extends Canvas implements Runnable{
       }
       mostrar();
       if(System.nanoTime() - referenciaContador > NSxS){
+        CONTADOR_APS = "APS:"+ aps;
+        CONTADOR_FPS = "FPS:"+ fps;
         ventana.setTitle(NOMBRE + " || APS: " + aps + " || FPS: " + fps);
         aps = 0;
         fps = 0;
