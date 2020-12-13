@@ -32,9 +32,9 @@ public abstract class Mapa{
   public void mostrar(final int compensacionX, final int compensacionY, final Pantalla pantalla){
     pantalla.establecerDiferencia(compensacionX, compensacionY);
     int o = compensacionX >> 5;
-    int e = (compensacionX + pantalla.getAncho() + 32) >> 5;
+    int e = (compensacionX + pantalla.getAncho() + Cuadro.LADO) >> 5;
     int n = compensacionY >> 5;
-    int s = (compensacionY + pantalla.getLargo() + 32) >> 5;
+    int s = (compensacionY + pantalla.getLargo() + Cuadro.LADO) >> 5;
     for(int y = n; y < s; y++){
       for(int x = o; x < e; x++){
         getCuadro(x, y).mostrar(x, y, pantalla);
