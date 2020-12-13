@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class MapaGenerado extends Mapa{
-  private final Random aleatorio = new Random();
+  private static final Random aleatorio = new Random();
   public MapaGenerado(int ancho, int largo){
     super(ancho, largo);
    }
