@@ -1,11 +1,8 @@
 package mapa.cuadro;
-import graficos.Sprite;
+import graficos.Pantalla;
 
 public class CuadroVacio extends Cuadro{
   public CuadroVacio(Sprite sprite){
     super(sprite);
-  }
-  public void mostrar(int x, int y, Pantalla pantalla){
-    pantalla.mostrarCuadro(x, y, this);
   }
 }
