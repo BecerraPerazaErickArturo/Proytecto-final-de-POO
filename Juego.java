@@ -48,6 +48,7 @@ public class Juego extends Canvas implements Runnable{
     ventana.setIconImage(icono.getImage());
     ventana.setLayout(new BorderLayout());
     ventana.add(this.BorderLayout.CENTER);
+    ventana.set(Undecorated(true));
     ventana.pack();
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
