@@ -42,10 +42,15 @@ public abstract class Mapa{
     }
   }
   public Cuadro getCuadro(final int x, final int y){
+    if(x < 0 || y < 0 || x >= ancho || y >= largo){
+      return Cuadro.VACIO;
+    }
     switch(cuadros[x + y * ancho]){
       case 0: return Cuadro.ASFALTO;
-      case 1: ;
-      default: return cuadro.Vacio;
+      case 1:
+      case 2:
+      case 3:
+      default: return Cuadro.VACIO;
     }
   }
 }
