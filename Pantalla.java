@@ -19,12 +19,16 @@ public final class Pantalla{
   public void mostrarCuadro(int compensacionX, in compensacionY, Cuadro cuadro){
     compensacionX -= diferenciaX;
     compensacionY -= diferenciaY;
-    for(int y=0; y< cuadro.sprite.getLado(); y++){
-      int posicionY= y+compensacionY;
-      for(int x=0; x< cuadro.sprite.getLado(); x++){
-        int posicionX= x + compensacionX;
-        if(posicionX < 0 || posicionX > ancho || posicionY < 0 || posicionY > largo ) break;
-        
+    for(int y = 0; y < cuadro.sprite.getLado(); y++){
+      int posicionY = y + compensacionY;
+      for(int x = 0; x < cuadro.sprite.getLado(); x++){
+        int posicionX = x + compensacionX;
+        if(posicionX < -cuadro.sprite.getLado() || posicionX > ancho || posicionY < 0 || posicionY > largo ){
+          break;
+        }
+        if(posicionX < 0){
+          posicionX = 0;
+        }
         pixeles[posicionX + posicionY * ancho] = cuadro.sprite.pixeles[x +y * cuadro.sprite.getLado()];
       }
     }
