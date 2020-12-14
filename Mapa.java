@@ -61,47 +61,21 @@ public abstract class Mapa{
       case 12: return  Cuadro.PLANTA_OBS_VOLT_1;
       case 13: return  Cuadro.PLANTA_OBS_VOLT_2;
       case 14: return  Cuadro.PLANTA_OBS_VOLT_3;
-      case 15: return  ;
-      case 16: return  ;
-      case 17: return  ;
-      case 18: return  ;
-      case 19: return  ;
-      case 20: return  ;
-      case 21: return  ;
-      case 22: return  ;
-      case 23: return  ;
-      case 24: return  ;
-      case 25: return  ;
-      case 26: return  ;
-      case 27: return  ;
-      case 28: return  ;
-      case 29: return  ;
-      case 30: return  ;   
-
-    
-    
-  
-   Cuadro.PLANTA_OBS_UP_1 
-   Cuadro.PLANTA_OBS_UP_2 
-   Cuadro.PLANTA_OBS_UP_3 
-  
-   Cuadro.PLANTA_NOR_VOLT_1 
-   Cuadro.PLANTA_NOR_VOLT_2 
-   Cuadro.PLANTA_NOR_VOLT_3 
-
-   Cuadro.SKY_LIGHT_1  
-   Cuadro.SKY_LIGHT_2  
-  
-   Cuadro.SKY_DARK_1 
-   Cuadro.SKY_DARK_2 
-  
-   Cuadro.PLANTA_NOR_UP_1 
-   Cuadro.PLANTA_NOR_UP_2 
-   Cuadro.PLANTA_NOR_UP_3  
-  
-   Cuadro.PURPLE 
-   Cuadro.BLUE
-        
+      case 15: return  Cuadro.PLANTA_OBS_UP_1;
+      case 16: return  Cuadro.PLANTA_OBS_UP_2;
+      case 17: return  Cuadro.PLANTA_OBS_UP_3;
+      case 18: return  Cuadro.PLANTA_NOR_VOLT_1;
+      case 19: return  Cuadro.PLANTA_NOR_VOLT_2;
+      case 20: return  Cuadro.PLANTA_NOR_VOLT_3;
+      case 21: return  Cuadro.SKY_LIGHT_1;
+      case 22: return  Cuadro.SKY_LIGHT_2;
+      case 23: return  Cuadro.SKY_DARK_1;
+      case 24: return  Cuadro.SKY_DARK_2;
+      case 25: return  Cuadro.PLANTA_NOR_UP_1;
+      case 26: return  Cuadro.PLANTA_NOR_UP_2;
+      case 27: return  Cuadro.PLANTA_NOR_UP_3;
+      case 28: return  Cuadro.PURPLE;
+      case 29: return  Cuadro.BLUE;
       default: return Cuadro.VACIO;
     }
   }
