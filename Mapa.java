@@ -46,10 +46,62 @@ public abstract class Mapa{
       return Cuadro.VACIO;
     }
     switch(cuadros[x + y * ancho]){
-      case 0: return Cuadro.ASFALTO;
-      case 1:
-      case 2:
-      case 3:
+      case 0: return Cuadro.CITY_UP_1;
+      case 1: return Cuadro.CITY_UP_2;
+      case 2: return Cuadro.CITY_UP_3;
+      case 3: return Cuadro.CITY_UP_4;
+      case 4: return Cuadro.CITY_UP_5;
+      case 5: return Cuadro.MOON;
+      case 6: return Cuadro.CITY_DOWN_1;
+      case 7: return Cuadro.CITY_DOWN_2;
+      case 8: return Cuadro.CITY_DOWN_3;
+      case 9: return Cuadro.CITY_DOWN_4;
+      case 10: return Cuadro.CITY_DOWN_5;
+      case 11: return  Cuadro.MOON_OBS;
+      case 12: return  Cuadro.PLANTA_OBS_VOLT_1;
+      case 13: return  Cuadro.PLANTA_OBS_VOLT_2;
+      case 14: return  Cuadro.PLANTA_OBS_VOLT_3;
+      case 15: return  ;
+      case 16: return  ;
+      case 17: return  ;
+      case 18: return  ;
+      case 19: return  ;
+      case 20: return  ;
+      case 21: return  ;
+      case 22: return  ;
+      case 23: return  ;
+      case 24: return  ;
+      case 25: return  ;
+      case 26: return  ;
+      case 27: return  ;
+      case 28: return  ;
+      case 29: return  ;
+      case 30: return  ;   
+
+    
+    
+  
+   Cuadro.PLANTA_OBS_UP_1 
+   Cuadro.PLANTA_OBS_UP_2 
+   Cuadro.PLANTA_OBS_UP_3 
+  
+   Cuadro.PLANTA_NOR_VOLT_1 
+   Cuadro.PLANTA_NOR_VOLT_2 
+   Cuadro.PLANTA_NOR_VOLT_3 
+
+   Cuadro.SKY_LIGHT_1  
+   Cuadro.SKY_LIGHT_2  
+  
+   Cuadro.SKY_DARK_1 
+   Cuadro.SKY_DARK_2 
+  
+   Cuadro.PLANTA_NOR_UP_1 
+   Cuadro.PLANTA_NOR_UP_2 
+   Cuadro.PLANTA_NOR_UP_3  
+  
+   Cuadro.PURPLE 
+   Cuadro.BLUE
+        
       default: return Cuadro.VACIO;
     }
   }
