@@ -19,15 +19,12 @@ public abstract class Mapa{
   }
   
   protected void generarMapa(){
-  
   }
   
-  private void cargarMapa(String ruta){
-  
+  protected void cargarMapa(String ruta){
   }
   
   public void actualizar(){
-  
   }
   
   public void mostrar(final int compensacionX, final int compensacionY, final Pantalla pantalla){
