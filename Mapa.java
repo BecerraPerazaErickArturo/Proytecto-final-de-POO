@@ -5,6 +5,7 @@ public abstract class Mapa{
   protected int ancho;
   protected int largo; //alto
   protected int[] cuadros; 
+  protected Cuadro[] cuadrosCatalogo;
   
   public Mapa(int ancho, int largo){
     this.ancho=ancho;
