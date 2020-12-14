@@ -28,6 +28,9 @@ public class MapaCargado extends Mapa{
    }
   
   protected void generarMapa(){
+    for(int i=0; i< pixeles.lenght; i++){
+      
+    }
   }
 
 }
