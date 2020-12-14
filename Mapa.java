@@ -16,6 +16,7 @@ public abstract class Mapa{
   
   public Mapa(String ruta){
     cargarMapa(ruta);
+    generarMapa();
   }
   
   protected void generarMapa(){
@@ -35,7 +36,12 @@ public abstract class Mapa{
     int s = (compensacionY + pantalla.getLargo() + Cuadro.LADO) >> 5;
     for(int y = n; y < s; y++){
       for(int x = o; x < e; x++){
-        getCuadro(x, y).mostrar(x, y, pantalla);
+      //  getCuadro(x, y).mostrar(x, y, pantalla);
+        if( x<0 || y<0 || x>=ancho || y>=alto ){
+          Cuadro.VACIO.mostrar(x,y,pantalla);
+        }else{
+          cuadrosCatalogo[x+y*ancho].mostrar(x,y, pantalla);
+        }
       }
     }
   }
