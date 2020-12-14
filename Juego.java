@@ -42,7 +42,8 @@ public class Juego extends Canvas implements Runnable{
   private Juego(){
     setPreferredSize(new Dimension(Ancho, Largo));
     pantalla = new Pantalla(Ancho, Largo);
-    mapa = new MapaGenerado(128, 128);
+   // mapa = new MapaGenerado(128, 128);
+    mapa=new MapaCargado(""); //ruta de foto del mapa pixeleado video 31
     teclado = new Teclado();
     addKeyListener(teclado);
     ventana = new JFrame(NOMBRE);
