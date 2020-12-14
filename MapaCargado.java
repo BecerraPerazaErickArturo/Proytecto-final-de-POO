@@ -13,7 +13,9 @@ public class MapaCargado extends Mapa{
   }
   
   protected void cargarMapa(String ruta){
-    BufferedImage imagen = ImageIO.read(MapaCargado.class.getResource(ruta))
+    BufferedImage imagen = ImageIO.read(MapaCargado.class.getResource(ruta));
+    
+    ancho =
   } catch (IOException e){
       e.printStackTrace();
   }
