@@ -4,7 +4,7 @@
 import graficos.Pantalla;
 import graficos.Sprite;
 
-public abstract class Cuadro{
+public class Cuadro{
   public int x;
   public int y;
   
