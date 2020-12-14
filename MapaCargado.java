@@ -29,7 +29,10 @@ public class MapaCargado extends Mapa{
   
   protected void generarMapa(){
     for(int i=0; i< pixeles.lenght; i++){
+      switch(pixeles[i]){
+          case 0x :
       
+      }
     }
   }
 
