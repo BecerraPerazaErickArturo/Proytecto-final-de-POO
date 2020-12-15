@@ -33,6 +33,26 @@ public final class Pantalla{
       }
     }
   }
+  
+  public void mostrarJugador(int compensacionX, int compensacionY, Jugador jugador){
+    compensacionX -= diferenciaX;
+    compensacionY -= diferenciaY;
+    
+    for(int y = 0; y < jugador.getSprite().getLado(); y++){
+      int posicionY = y + compensacionY;
+      for(int x = 0; x < jugador.getSprite().getLado(); x++){
+        int posicionX = x + compensacionX;
+        if(posicionX < -jugador.getSprite().getLado() || posicionX >= ancho || posicionY < 0 || posicionY >= largo ){
+          break;
+        }
+        if(posicionX < 0){
+          posicionX = 0;
+        }
+        pixeles[posicionX + posicionY * ancho] = jugador.getSprite.pixeles[x +y * jugador.getSprite.getLado()];
+      }
+    }
+  }
+  
   public void estableceDiferencia(final int diferenciaX, final int diferenciaY){
     this.diferenciaX = diferenciaX;
     this.diferenciaY = diferenciaY;
