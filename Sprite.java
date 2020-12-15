@@ -7,7 +7,25 @@ public final class Sprite{
   public int[] pixeles;
   private HojaSprites hoja;
   
-  ///Coleccion de Sprites
+  //Coleccion de Sprites del personaje
+  public static final Sprite MAGO_FRENTE_1 = new Sprite(32, 0, 0, 0, HojaSprites.jugador);
+  public static final Sprite MAGO_FRENTE_2 = new Sprite(32, 0, 1, 0, HojaSprites.jugador);
+  public static final Sprite MAGO_FRENTE_3 = new Sprite(32, 0, 2, 0, HojaSprites.jugador);
+  
+  public static final Sprite MAGO_ATRAS_1 = new Sprite(32, 1, 0, 0, HojaSprites.jugador);
+  public static final Sprite MAGO_ATRAS_2 = new Sprite(32, 1, 1, 0, HojaSprites.jugador);
+  public static final Sprite MAGO_ATRAS_3 = new Sprite(32, 1, 2, 0, HojaSprites.jugador);
+  
+  public static final Sprite MAGO_DER_1 = new Sprite(32, 2, 0, 0, HojaSprites.jugador);
+  public static final Sprite MAGO_DER_2 = new Sprite(32, 2, 1, 0, HojaSprites.jugador);
+  public static final Sprite MAGO_DER_3 = new Sprite(32, 2, 2, 0, HojaSprites.jugador);
+  
+  public static final Sprite MAGO_IZ_1 = new Sprite(32, 3, 0, 0, HojaSprites.jugador);
+  public static final Sprite MAGO_IZ_2 = new Sprite(32, 3, 1, 0, HojaSprites.jugador);
+  public static final Sprite MAGO_IZ_3 = new Sprite(32, 3, 2, 0, HojaSprites.jugador);
+  //fin de coleccion del personaje
+  
+  ///Coleccion de Sprites del mapa desértico
   public static final Sprite VACIO = new Sprite(32, 0);
   //                                                    x  y (version de carga del sprite)
   public static final Sprite CITY_UP_1 = new Sprite(32, 0, 0, 0, HojaSprites.mapa); //este se llamaba nom antes
