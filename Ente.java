@@ -18,7 +18,7 @@ public abstract class Ente{
     eliminado = true;
   }
   
-  public int obtenerPosicionX(){
+  public int getPosicionX(){
     return x;
   }
   
@@ -26,7 +26,7 @@ public abstract class Ente{
     x +=desplazamientoX;
   }
   
-  public int obtenerPosicionY(){
+  public int getPosicionY(){
     return y;
   }
   
