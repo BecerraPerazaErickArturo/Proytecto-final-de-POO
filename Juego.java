@@ -49,7 +49,7 @@ public class Juego extends Canvas implements Runnable{
     addKeyListener(teclado);
     
     mapa=new MapaCargado(""); //ruta de foto del mapa pixeleado video 31
-    jugador = new Jugador(teclado);
+    jugador = new Jugador(teclado, Sprite.MAGO_FRENTE_1);
     
     ventana = new JFrame(NOMBRE);
     ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
