@@ -1,5 +1,5 @@
 package entes;
 
-public class Ente{
+public abstract class Ente{
 
 }
