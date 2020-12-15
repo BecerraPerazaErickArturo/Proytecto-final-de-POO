@@ -33,6 +33,8 @@ public class Juego extends Canvas implements Runnable{
   private static Teclado teclado;
   private static Pantalla pantalla;
   private static Mapa mapa;
+  private static Jugador jugador;
+  
   private static BufferedImage = new BufferedImage(Ancho, Largo, BufferedImage.TYPE_INT_RGB);
   private static int[] pixeles = ((DataBufferInt) imagen.getRaster().getDataBuffer()).getData();
   
@@ -44,6 +46,8 @@ public class Juego extends Canvas implements Runnable{
     pantalla = new Pantalla(Ancho, Largo);
    // mapa = new MapaGenerado(128, 128);
     mapa=new MapaCargado(""); //ruta de foto del mapa pixeleado video 31
+    jugador = new Jugador(teclado);
+    
     teclado = new Teclado();
     addKeyListener(teclado);
     ventana = new JFrame(NOMBRE);
@@ -77,18 +81,8 @@ public class Juego extends Canvas implements Runnable{
   private void actualizar(){
     teclado.actualizar();
     
-    if(teclado.arriba){
-      y--;
-    }
-    if(teclado.abajo){
-      y++;
-    }
-    if(teclado.izquierda){
-      x--;
-    }
-    if(teclado.derecha){
-      x++;
-    }
+    jugador.actualizar();
+    
     if(teclado.salir){
       System.exit(0);
     }
