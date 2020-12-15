@@ -26,8 +26,7 @@ public class Juego extends Canvas implements Runnable{
 
   private static int aps = 0;
   private static int fps = 0;
-  private static x = 0;
-  private static y = 0;
+
   private static JFrame ventana;
   private static Thread thread;
   private static Teclado teclado;
@@ -95,7 +94,7 @@ public class Juego extends Canvas implements Runnable{
       return;
     }
     ///pantalla.limpiar();
-    mapa.mostrar(X, Y, pantalla);
+    mapa.mostrar(jugador.x, jugador.y, pantalla);
     System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.lenght);
     Graphics g = estrategia.getDrawGrafics();
     g.drawImage(imagen, 0, 0, getWidth(), getHeight(), null);
