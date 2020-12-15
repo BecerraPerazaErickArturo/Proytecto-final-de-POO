@@ -31,7 +31,8 @@ public class Jugador extends Criatura{
     }
   }
   
-  public void mostrar(){
+  public void mostrar(Pantalla pantalla){
+    pantalla.mostrarJugador(x,y, this);
   }
   
 }
