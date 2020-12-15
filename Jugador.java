@@ -1,16 +1,19 @@
 package entes.criaturas;
 
-import entes.Ente; 
+import graficos.Sprites;
+import control.Teclado;
 
 public class Jugador extends Criatura{
   private Teclado teclado;
   
-  public Jugador(Teclado teclado){
+  public Jugador(Teclado teclado, Sprite sprite){
     this.teclado = teclado;
+    this.sprite = sprite;
   }
   
-  public Jugador(Teclado teclado, int posicionX, int posicionY){
+  public Jugador(Teclado teclado, Sprite sprite, int posicionX, int posicionY){
     this.teclado = teclado;
+    this.sprite = sprite;
     this.x = posicionX;
     this.y = posicionY;
   }
