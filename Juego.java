@@ -97,6 +97,8 @@ public class Juego extends Canvas implements Runnable{
     }
     ///pantalla.limpiar();
     mapa.mostrar(jugador.getPosicionX(), jugador.getPosicionY(), pantalla);
+    jugador.mostrar(pantalla);
+    
     System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.lenght);
     Graphics g = estrategia.getDrawGrafics();
     
