@@ -1,5 +1,7 @@
 package entes.criaturas;
 
-public class Criatura{
+import entes.Ente;
+
+public abstract class Criatura extends Ente{
 
 }
