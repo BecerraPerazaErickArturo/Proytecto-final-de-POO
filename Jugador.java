@@ -1,5 +1,7 @@
 package entes.criaturas;
 
-public class Jugador{
+import entes.Ente; 
+
+public class Jugador extends Criatura{
 
 }
