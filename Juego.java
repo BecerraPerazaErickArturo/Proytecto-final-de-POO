@@ -44,11 +44,13 @@ public class Juego extends Canvas implements Runnable{
     setPreferredSize(new Dimension(Ancho, Largo));
     pantalla = new Pantalla(Ancho, Largo);
    // mapa = new MapaGenerado(128, 128);
+
+    teclado = new Teclado();
+    addKeyListener(teclado);
+    
     mapa=new MapaCargado(""); //ruta de foto del mapa pixeleado video 31
     jugador = new Jugador(teclado);
     
-    teclado = new Teclado();
-    addKeyListener(teclado);
     ventana = new JFrame(NOMBRE);
     ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     ventana.setResizable(false);
@@ -94,16 +96,19 @@ public class Juego extends Canvas implements Runnable{
       return;
     }
     ///pantalla.limpiar();
-    mapa.mostrar(jugador.x, jugador.y, pantalla);
+    mapa.mostrar(jugador.getPosicionX(), jugador.getPosicionY(), pantalla);
     System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.lenght);
     Graphics g = estrategia.getDrawGrafics();
+    
     g.drawImage(imagen, 0, 0, getWidth(), getHeight(), null);
-    //g.setColor(Color.white); pal cuadro
-    //g.fill noseque
+    g.setColor(Color.white); 
+    g.fillRect(ANCHO/2 , LARGO/2, 32,32);
     g.drawString(CONTADOR_APS, 10, 20);
     g.drawString(CONTADOR_FPS, 10, 35);
-    
+    g.drawString("X: " + jugador.getPosicionX(), 10, 50);
+    g.drawString("Y: " + jugador.getPosicionY(), 10, 65);
     g.dispose();
+    
     estrategia.show();
     fps++;
   }
