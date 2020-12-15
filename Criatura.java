@@ -1,4 +1,4 @@
-package entes.criatura
+package entes.criaturas;
 
 public class Criatura{
 
