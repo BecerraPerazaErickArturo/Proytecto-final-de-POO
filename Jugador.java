@@ -27,6 +27,19 @@ public class Jugador extends Criatura{
     if (teclado.izquierda) desplazamientoX--; 
     if (teclado.derecha) desplazamientoX++; 
     if (desplazamientoX !=0 || desplazamientoY !=0 ){
+      
+      if(direccion == 'n'){
+        sprite = Sprite.MAGO_ATRAS_1;
+      }
+      if(direccion == 's'){
+        sprite = Sprite.MAGO_FRENTE_1;
+      }
+      if(direccion == 'o'){
+        sprite = Sprite.MAGO_IZ_1;
+      }
+      if(direccion == 'e'){
+        sprite = Sprite.MAGO_DER_1;
+      }
       mover(desplazamientoX, desplazamientoY);
     }
   }
