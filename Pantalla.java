@@ -32,7 +32,7 @@ public final class Pantalla{
         //pixeles[posicionX + posicionY * ancho] = cuadro.sprite.pixeles[x +y * cuadro.sprite.getLado()];
         int colorPixelJugador = jugador.getSprite().pixeles[ x + y * jugador.getSprite().getLado()];
         
-        if(colorPixelJugador != //aqui va el codigo del color del fondo del personaje 0xnumero hex//){
+        if(colorPixelJugador != //aqui va el codigo del color del fondo del personaje 0xff+numero hex//){
            pixeles[posicionX + posicionY * ancho] = colorPixelJugador;
            }
       }
