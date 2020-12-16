@@ -42,28 +42,34 @@ public class Jugador extends Criatura{
       enMovimiento = false;
     }
     
+    int resto = animacion % 30;
+    
       if(direccion == 'n'){
         sprite = Sprite.MAGO_ATRAS_1;
         if(enMovimiento){
-          
-          int resto = animacion % 30;
-          
           if(resto > 10 && resto <=20){ //esto es la rapidez de la animacion, para mas lento incremente su numero proporcional
             sprite = Sprite.MAGO_ATRAS_1;
-        }else if(resto>20){
+        }else if(resto>20 && resto <=30){
           sprite = Sprite.MAGO_ATRAS_2;
-        }else{
+        }else if(resto>30){
             sprite = Sprite.MAGO_ATRAS_3;
-          }
+          }else{
+            sprite = Sprite.MAGO_ATRAS_1;
+               }
       }
+        
       if(direccion == 's'){
         sprite = Sprite.MAGO_FRENTE_1;
         if(enMovimiento){
           if(resto > 10 && resto <=20){ //esto es la rapidez de la animacion, para mas lento incremente su numero proporcional
             sprite = Sprite.MAGO_FRENTE_1;
-        }else if(resto>20){
+        }else if(resto>20 && resto <=30){
           sprite = Sprite.MAGO_FRENTE_2;
-        }else sprite = Sprite.MAGO_FRENTE_3;
+        }else if(resto>30){
+            sprite = Sprite.MAGO_FRENTE_3;
+          }else{
+            sprite = Sprite.MAGO_FRENTE_1;
+          }
         
       }
       if(direccion == 'o'){
@@ -71,18 +77,26 @@ public class Jugador extends Criatura{
         if(enMovimiento){
           if(resto > 10 && resto <=20){ //esto es la rapidez de la animacion, para mas lento incremente su numero proporcional
             sprite = Sprite.MAGO_IZ_1;
-        }else if(resto>20){
+        }else if(resto>20 && resto <=30){
           sprite = Sprite.MAGO_IZ_2;
-        }else sprite = Sprite.MAGO_IZ_3;
+        }else if(resto>30){ 
+            sprite = Sprite.MAGO_IZ_3;
+          }else{
+            sprite = Sprite.MAGO_IZ_1;
+          }
       }
       if(direccion == 'e'){
         sprite = Sprite.MAGO_DER_1;        
         if(enMovimiento){
           if(resto > 10 && resto <=20){ //esto es la rapidez de la animacion, para mas lento incremente su numero proporcional
             sprite = Sprite.MAGO_DER_1;
-        }else if(resto>20){
+        }else if(resto>20 && resto <=30){
           sprite = Sprite.MAGO_DER_2;
-      } else  sprite = Sprite.MAGO_DER_3;
+        }else if(resto>30){ 
+            sprite = Sprite.MAGO_DER_3;
+        }else{
+            sprite = Sprite.MAGO_DER_1;
+        }
         
   }
   
