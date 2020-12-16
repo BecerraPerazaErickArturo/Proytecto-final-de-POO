@@ -27,13 +27,28 @@ public abstract class Criatura extends Ente{
       direccion ='n'; //norte
     }
     if(!estaEliminado()){
-      modificarPosicionX(desplazamientoX);
-      modificarPosicionY(desplazamientoY);
+      if(!enColision(desplazamientoX, 0)){
+        modificarPosicionX(desplazamientoX);
+      }
+      if(!enColision(0, desplazamientoY)){
+        modificarPosicionY(desplazamientoY);
+      }
     }
   }
   
-  private boolean enColision(){
-    return false;
+  private boolean enColision(int desplazamientoX, int desplazamientoY){
+    boolean colision = false;
+    int posicionX = x + desplazamientoX;
+    int posicionY = y + desplazamientoY;
+    int margenIzquierdo = -6;//Depende de cada personajo, en nuestro caso seria prueba y error
+    int margenDerecho = 18;
+    int margenSuperior = -4;
+    int margenInferior = 31;
+    int bordeIzquierdo = (posicionX + margenDerecho)/sprite.getLado();
+    int bordeDerecho = (posicionX + margenDerecho + margenIzquierdo)/sprite.getLado();
+    int bordeSuperior = (posicionY + margenInferior)/sprite.getLlado();
+    int bordeInferior = (posicionY + margenInferior + margenSuperior)/sprite.getLado();
+    return colision;
   }
   
   public Sprite getSprite(){
