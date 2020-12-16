@@ -23,6 +23,7 @@ public class Jugador extends Criatura{
   public void actualizar(){
     int desplazamientoX = 0;
     int desplazamientoY = 0;
+    int velocidadMovimiento=1;
   
     if(animacion < 32767){
       animacion++;
@@ -30,10 +31,11 @@ public class Jugador extends Criatura{
       animacion=0;
     }
     
-    if (teclado.arriba) desplazamientoY--; 
-    if (teclado.abajo) desplazamientoY++; 
-    if (teclado.izquierda) desplazamientoX--; 
-    if (teclado.derecha) desplazamientoX++; 
+    if (teclado.correr) velocidadMovimiento = 2;//si le aumentas es que tan rápido avanza
+    if (teclado.arriba) desplazamientoY -= velocidadMovimiento; 
+    if (teclado.abajo) desplazamientoY += velocidadMovimiento; 
+    if (teclado.izquierda) desplazamientoX -= velocidadMovimiento; 
+    if (teclado.derecha) desplazamientoX += velocidadMovimiento; 
     
     if (desplazamientoX !=0 || desplazamientoY !=0 ){
       mover(desplazamientoX, desplazamientoY);
