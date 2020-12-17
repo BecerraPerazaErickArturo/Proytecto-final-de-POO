@@ -48,6 +48,7 @@ public abstract class Criatura extends Ente{
     int bordeDerecho = (posicionX + margenDerecho + margenIzquierdo)/sprite.getLado();
     int bordeSuperior = (posicionY + margenInferior)/sprite.getLlado();
     int bordeInferior = (posicionY + margenInferior + margenSuperior)/sprite.getLado();
+    if(mapa.getCuadroCatalogo(bordeIquierdo + bordeSuperior * mapa.))
     return colision;
   }
   
