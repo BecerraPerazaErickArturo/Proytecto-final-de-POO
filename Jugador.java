@@ -8,12 +8,14 @@ public class Jugador extends Criatura{
   private Teclado teclado;
   private int aimacion;
   
-  public Jugador(Teclado teclado, Sprite sprite){
+  public Jugador(Mapa mapa, Teclado teclado, Sprite sprite){
+    this.mapa = mapa;
     this.teclado = teclado;
     this.sprite = sprite;
   }
   
-  public Jugador(Teclado teclado, Sprite sprite, int posicionX, int posicionY){
+  public Jugador(Mapa mapa, Teclado teclado, Sprite sprite, int posicionX, int posicionY){
+    this.mapa = mapa;
     this.teclado = teclado;
     this.sprite = sprite;
     this.x = posicionX;
