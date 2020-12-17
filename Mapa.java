@@ -48,10 +48,13 @@ public abstract class Mapa{
   public Cuadro getCuadroCatalogo(int posicion){
     return cuadrosCatalogo[posicion];
   }
+  public int getAncho(){
+    return ancho;
+  }
   public Cuadro getCuadro(final int x, final int y){
     if(x < 0 || y < 0 || x >= ancho || y >= largo){
       return Cuadro.VACIO;
-    }
+  }
     switch(cuadros[x + y * ancho]){
       case 0: return Cuadro.CITY_UP_1;
       case 1: return Cuadro.CITY_UP_2;
