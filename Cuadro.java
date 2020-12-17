@@ -13,7 +13,7 @@ public class Cuadro{
   
   //coleccion de cuadros
   ///Se agrega un "true" al constructor si esa parte del mapa es solida, para que el personaje no pueda atravesarla
-  public static final Cuadro VACIO = new CuadroVacio(Sprite.VACIO);
+  public static final Cuadro VACIO = new CuadroVacio(Sprite.VACIO, true);
   
   public static final Cuadro CITY_UP_1 = new Cuadro(Sprite.CITY_UP_1); 
   public static final Cuadro CITY_UP_2 = new Cuadro(Sprite.CITY_UP_2);
