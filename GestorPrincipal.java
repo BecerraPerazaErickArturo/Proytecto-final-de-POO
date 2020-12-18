@@ -73,9 +73,11 @@ public class GestorPrincipal{
   }
   
   private void actualizar(){
+    //ge.actualizar();
   }
   
   private void dibujar(){
+    //ge.dibujar();
   }
   
 }
