@@ -23,11 +23,11 @@ public class GestorEstados{
     estadoActual = estados[0];
   }
 
-  private void actualizar(){
+  public void actualizar(){
     estadoActual.actualizar();
   }
   
-  private void dibujar(final Graphics g){
+  public void dibujar(final Graphics g){
     estadoActual.dibujar(g);
   }
   
