@@ -31,7 +31,7 @@ public class GestorPrincipal{
   }
   
   private void inicializar(){
-    sd = new SuperficieDibujo();
+    sd = new SuperficieDibujo(ancho, largo);
     ventana = new Ventana(titulo, sd);
     ge = new GestorEstados();
   }
