@@ -73,11 +73,12 @@ public class GestorPrincipal{
   }
   
   private void actualizar(){
+    sd.getTeclado().actualizar();
     ge.actualizar();
   }
   
   private void dibujar(){
-    ge.dibujar();
+    sd.dibujar(ge);
   }
   
 }
