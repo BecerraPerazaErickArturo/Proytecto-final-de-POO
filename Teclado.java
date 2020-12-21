@@ -4,7 +4,8 @@ import java.awt.event.KeyListener;
 
 public final class Teclado implements KeyListener{
   
-  private final static int numeroTeclas = 120;
+  ///Cambio de nombre a "numeroTeclas" a todo mayusculas pero lo hizo con refactor para que se cambiara por atomatico en cada llamada
+  private final static int numeroTeclas = 256;
   private final boolean[] teclas = new boolean[numeroTeclas];
   
   public boolean arriba;
