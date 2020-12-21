@@ -35,7 +35,8 @@ public class GestorEstados{
     estadoActual = estado[nuevoEstado];
   }
   
-  public EstadoJuego obtenerEstadoActual(){
+  ///Ccambie obtener por get
+  public EstadoJuego getEstadoActual(){
     return estadoActual;
   }
   
