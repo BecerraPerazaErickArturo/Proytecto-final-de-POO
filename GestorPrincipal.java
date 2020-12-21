@@ -32,7 +32,7 @@ public class GestorPrincipal{
   
   private void inicializar(){
     sd = new SuperficieDibujo();
-    ventana = new Ventana();
+    ventana = new Ventana(titulo, sd);
     ge = new GestorEstados();
   }
   
