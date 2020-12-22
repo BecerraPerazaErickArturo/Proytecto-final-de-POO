@@ -7,7 +7,8 @@ public class Mapa{
   private String[] partes;
   public Mapa(final String ruta){
     String contenido = CargadorRecursos.LeerArchivoTexto(ruta);
-    partes = contenido.split("*");
+    partes = contenido.split("\\*");
+    escribirArray();
   }
   public void escribirArray(){
     for(int i = 0; i < partes.length; i++){
