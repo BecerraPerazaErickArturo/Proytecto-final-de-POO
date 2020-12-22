@@ -10,6 +10,8 @@ public class GestorJuego implements EstadoJuego{
   public void dibujar(Graphics g){
     g.setColor(Color.white);
     g.drawString(texto, 10, 10);
-    for(int y = 0; y < )
+    for(int y = 0; y < mapa.getLargo(); y++){
+      for(int x = 0; x < mapa.getAncho)
+    }
   }
 }
