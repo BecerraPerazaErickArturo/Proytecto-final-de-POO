@@ -79,5 +79,4 @@ public class GestorPrincipal{
   private void dibujar(){
     sd.dibujar(ge);
   }
-  
 }
