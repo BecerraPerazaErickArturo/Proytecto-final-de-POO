@@ -55,6 +55,6 @@ public class HojaSprites2{
     return sprites[indice];
   }
   public Sprite getSprite(final int x, final int y){
-    return sprites[x + y *anchoSprites];
+    return sprites[x + y *anchoHojaEnSprites];
   }
 }
