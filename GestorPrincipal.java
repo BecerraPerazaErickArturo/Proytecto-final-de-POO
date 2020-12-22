@@ -1,5 +1,4 @@
-//package principal;
-
+package principal;
 public class GestorPrincipal{
 
   private boolean enFuncionamiento = false;
