@@ -79,4 +79,7 @@ public class Mapa{
   public Sprite getSpritePaleta(final int indice){
     return paleta[indice];
   }
+  public Sprite getSpritePaleta(final int x, final int y){
+    return paleta[x + y * this.ancho];
+  }
 }
