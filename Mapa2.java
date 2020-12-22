@@ -70,4 +70,13 @@ public class Mapa{
     }
     return vectorSprites;
   }
+  public int getAncho(){
+    return this.ancho;
+  }
+  public int getLargo(){
+    return this.Largo;
+  }
+  public Sprite getSpritePaleta(final int indice){
+    return paleta[indice];
+  }
 }
