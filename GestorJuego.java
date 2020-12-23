@@ -3,7 +3,7 @@ import java.awt.Graphics;
 
 public class GestorJuego implements EstadoJuego{
   Mapa mapa = new Mapa("\\Ruta");
-  Jugador jugador = new jugador(1, 1);
+  Jugador jugador = new jugador(0, 0);
   BufferedImage logo = CargadorRecursos.cargarImagenCompatibleTranslucida("\\Ruta");
   public void actualizar(){
   }
