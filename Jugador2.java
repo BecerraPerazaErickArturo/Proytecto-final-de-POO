@@ -14,4 +14,16 @@ public class Jugador2{
     g.setColor(Color.white);
     g.fillRect(centroX, centroY, Constantes.LADO_SPRITE, Constantes.LADO_SPRITE);
   }
+  public void establecerPosicionX(double posicionX){
+    this.posicionX = posicionX;
+  }
+  public void establecerPosicionY(double posicionY){
+    this.posicionY = posicionY;
+  }
+  public double getPosicionX(){
+    return posicionX;
+  }
+  public double getPosicionY(){
+    return posicionY;
+  }
 }
