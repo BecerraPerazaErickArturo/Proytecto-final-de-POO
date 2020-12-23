@@ -22,7 +22,7 @@ public class GestorJuego implements EstadoJuego{
     }
   }
   public void dibujar(Graphics g){
-    mapa.dibujar(g);
+    mapa.dibujar(g, (int)jugador.getPosicionX(), (int)jugador.getPosicionY());
     jugador.dibujar(g);
     g.drawImage(logo, 640 - logo.getWidth()- 5, 360 - logo.getHeight() - 5, null);
     g.setColor(Color.red);
