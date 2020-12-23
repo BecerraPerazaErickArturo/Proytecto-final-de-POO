@@ -14,12 +14,12 @@ public class GestorPrincipal{
     this.titulo = titulo;
     this.ancho = ancho;
     this.largo = largo;
-    
   }
   
   public static void main(String[] args){
     GestorPrincipal gp = new GestorPrincipal("Math or Die", 640,360);
-    
+    Constantes.ANCHO_PANTALLA = 640;
+    Constantes.LARGO_PANTALLA = 360;
     gp.iniciarJuego();
     gp.iniciarBuclePrincipal();
   }
