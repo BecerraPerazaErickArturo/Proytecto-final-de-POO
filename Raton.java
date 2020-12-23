@@ -14,9 +14,13 @@ public class Raton{
   public Raton(){
     Toolkit configuracion = Toolkit.getDefaultToolKit();
     
-    BufferedImage icono = CargadorRecursos.cargarImagenCompatibleTranslucida("");
+    BufferedImage icono = CargadorRecursos.cargarImagenCompatibleTranslucida("ruta del raton");
     
     Point punta = new Point(0,0);
     this.cursor = configuracion.createCustomCursor(icono,punta,"Cursor por defecto");
+  }
+  
+  public Cursor getCursor(){
+    return this.cursor;
   }
 }
