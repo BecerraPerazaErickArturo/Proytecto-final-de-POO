@@ -8,7 +8,7 @@ public class GestorJuego implements EstadoJuego{
   public void actualizar(){
   }
   public void actualizar(){
-
+    jugador.actualizar();
   }
   public void dibujar(Graphics g){
     mapa.dibujar(g, (int)jugador.getPosicionX(), (int)jugador.getPosicionY());
