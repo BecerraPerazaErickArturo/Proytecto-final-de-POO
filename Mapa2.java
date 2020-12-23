@@ -24,6 +24,7 @@ public class Mapa{
     String cadenasSprites = spritesEneteros.split(" ");
     sprites = extraerSprites(cadenaSprites);
   }
+  
   private Sprite[] asignarSprites(final String[] partesPaleta, final String[] hojasSeparadas){
     Sprite[] paleta = new Sprite[partesPaleta.length];
     HojaSprites hoja = new HojaSprites("ruta" + HojasSeparadas[0] + ".png", 32, false);
@@ -36,6 +37,7 @@ public class Mapa{
     }
     return paleta;
   }
+  
   private boolean[] extraerColisiones(final String cadenaColisiones){
     boolean[] colisiones = new boolean[cadenaColisiones.length()];
     for(int i = 0; i < colisiones.length(); i++){
@@ -47,6 +49,7 @@ public class Mapa{
       return colisiones;
     }
   }
+  
   private int[] extraerSprites(final String[] cadenaSprites){
     ArrayList<Integer> sprites = new ArrayList<Integer>();
     for(int i = 0; i < cadenaSprites.length; i++){
@@ -70,19 +73,16 @@ public class Mapa{
     }
     return vectorSprites;
   }
-  public int getAncho(){
-    return this.ancho;
+  
+  public void dibujar(Graphics g){
+    int anchoSprite = this.paleta[0].getAncho();
+    int largoSprite = this.paleta[0].getLargo();
+    for(int y=0; y < this.largo ; y++){
+      for(int x=0; x < this.ancho; x++){
+        BufferedImage imagen = paleta[sprites[x + y * this.ancho]].getImagen();
+        g.drawImage(imagen , x*anchoSprite, y*largoSprite, null);
+      }
+    }
   }
-  public int getLargo(){
-    return this.Largo;
-  }
-  public Sprite getSpritePaleta(final int indice){
-    return paleta[indice];
-  }
-  public Sprite getSpritePaleta(final int x, final int y){
-    return paleta[x + y * this.ancho];
-  }
-  public Sprite[] getPaleta(){
-    return this.paleta;
-  }
+
 }
