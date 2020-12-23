@@ -72,7 +72,7 @@ public class GestorPrincipal{
   }
   
   private void actualizar(){
-    sd.getTeclado().actualizar();
+    GestorControles.teclado.actualizar();
     ge.actualizar();
   }
   
