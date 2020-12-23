@@ -11,11 +11,17 @@ public class SuperficieDibujo extends Canvas{
   private int ancho;
   private int largo;
   private Teclado teclado;
+  private Raton raton;
+  
   public SuperficieDibujo(final int ancho, final int largo){
     this.ancho = ancho;
     this.largo = largo;
-    teclado = new Teclado();
+    this.teclado = new Teclado();
+    this.raton = new Raton();
+    
+    
     setIgnoreRepaint(true);
+    setCursor(raton.getCursor());
     setPreferredSize(new Dimension(ancho, largo));
     addKeyListener(teclado);
     setFocusable(true);
