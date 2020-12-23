@@ -80,7 +80,7 @@ public class Mapa{
     for(int y=0; y < this.largo ; y++){
       for(int x=0; x < this.ancho; x++){
         BufferedImage imagen = paleta[sprites[x + y * this.ancho]].getImagen();
-        g.drawImage(imagen , x * anchoSprite, y * largoSprite, null);
+        g.drawImage(imagen , x * anchoSprite - posicionX, y * largoSprite - posicionY, null);
       }
     }
   }
