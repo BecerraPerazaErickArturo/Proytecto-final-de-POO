@@ -10,20 +10,17 @@ public class SuperficieDibujo extends Canvas{
   private static final long serialVersionUID = -6227038142688953660L;
   private int ancho;
   private int largo;
-  private Teclado teclado;
   private Raton raton;
   
   public SuperficieDibujo(final int ancho, final int largo){
     this.ancho = ancho;
     this.largo = largo;
-    this.teclado = new Teclado();
     this.raton = new Raton();
-    
     
     setIgnoreRepaint(true);
     setCursor(raton.getCursor());
     setPreferredSize(new Dimension(ancho, largo));
-    addKeyListener(teclado);
+    addKeyListener(GestorControles.teclado);
     setFocusable(true);
     requestFocus();
   }
@@ -40,9 +37,6 @@ public class SuperficieDibujo extends Canvas{
     Toolkit.getDefaultToolkit().sync();
     g.dispose();
     buffer.show();
-  }
-  public Teclado getTeclado(){
-    return teclado;
   }
   public int getAncho(){
     return ancho;
