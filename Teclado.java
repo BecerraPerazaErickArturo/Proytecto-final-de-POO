@@ -8,15 +8,13 @@ public final class Teclado implements KeyListener{
   private final static int numeroTeclas = 256;
   private final boolean[] teclas = new boolean[numeroTeclas];
   
-  public boolean arriba;
-  public boolean abajo;
-  public boolean izquierda;
-  public boolean derecha;
-  public boolean correr;
-  public boolean salir;
+  private boolean arriba;
+  private boolean abajo;
+  private boolean izquierda;
+  private boolean derecha;
+  private boolean correr;
+  private boolean salir;
 
-  
-  
   public void actualizar(){
     arriba = teclas[KeyEvent.VK_W];
     abajo = teclas[KeyEvent.VK_S];
@@ -36,5 +34,23 @@ public final class Teclado implements KeyListener{
   
   public void KeyTyped(KeyEvent e){
     
+  }
+  public boolean pulsadoArriba(){
+    return arriba;
+  }
+  public boolean pulsadoAbajo(){
+    return abajo;
+  }
+  public boolean pulsadoIzquierda(){
+    return izquierda;
+  }
+  public boolean pulsadoDerecha(){
+    return derecha;
+  }
+  public boolean pulsadoCorrer(){
+    return correr;
+  }
+  public boolean pulsadoSalir(){
+    return salir;
   }
 }
