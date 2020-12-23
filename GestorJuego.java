@@ -9,6 +9,8 @@ public class GestorJuego implements EstadoJuego{
   }
   public void dibujar(Graphics g){
     g.setColor(Color.white);
-    for()
+    for(int i = 0; i < mapa.getPaleta().length; i++){
+      g.drawImage(mapa.getSpritePaleta(i).getImagen, i*32, 0, null);
+    }
   }
 }
