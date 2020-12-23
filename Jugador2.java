@@ -1,12 +1,27 @@
 package principal.entes;
 
-public class Jugador2{
+public class Jugador{
   private double posicionX;
   private double posicionY;
   private Sprite sprite;
   public Jugador(double posicionX, double posicionY){
     this.posicionX = posicionX;
     this.posicionY = posicionY;
+  }
+  public void actualizar(){
+    ///Al restar se vuleve mas lento y al sumar mas rapido en esta serie de If's
+    if(GestorControl.teclado.pulsadoArriba()){
+      posicionY -= 1;
+    }
+    if(GestorControl.teclado.pulsadoAbajo()){
+      posicionY += 1;
+    }
+    if(GestorControl.teclado.pulsadoIzquierda()){
+      posicionX -= 1;
+    }
+    if(GestorControl.teclado.pulsadoIzquierda()){
+      posicionX += 1;
+    }
   }
   public void dibujar(Graphics g){
     final int centroX = Constantes.ANCHO_PANTALLA / 2 - Constantes.LADO_SPRITE / 2;
