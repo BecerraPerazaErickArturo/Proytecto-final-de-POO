@@ -8,17 +8,18 @@ public class GestorJuego implements EstadoJuego{
   public void actualizar(){
   }
   public void actualizar(){
+    ///Al restar se vuleve mas lento y al sumar mas rapido en esta serie de If's
     if(GestorControl.teclado.pulsadoArriba()){
-      jugador.establecerPosicionX(jugador.getPosicionY() - 1);
-    }
-    if(GestorControl.teclado.pulsadoAbajo()){
-      jugador.establecerPosicionX(jugador.getPosicionY() + 1);
-    }
-    if(GestorControl.teclado.pulsadoIzquierda()){
       jugador.establecerPosicionY(jugador.getPosicionY() - 1);
     }
-    if(GestorControl.teclado.pulsadoIzquierda()){
+    if(GestorControl.teclado.pulsadoAbajo()){
       jugador.establecerPosicionY(jugador.getPosicionY() + 1);
+    }
+    if(GestorControl.teclado.pulsadoIzquierda()){
+      jugador.establecerPosicionX(jugador.getPosicionX() - 1);
+    }
+    if(GestorControl.teclado.pulsadoIzquierda()){
+      jugador.establecerPosicionX(jugador.getPosicionX() + 1);
     }
   }
   public void dibujar(Graphics g){
