@@ -2,34 +2,26 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-public class MapaCargado extends Mapa {
-
+public class MapaCargado extends Mapa{
 	private int[] pixeles;
-
-	public MapaCargado(String ruta) {
+	public MapaCargado(String ruta){
 		super(ruta);
 	}
-
-	protected void cargarMapa(String ruta) {
+	protected void cargarMapa(String ruta){
 		try {
 			BufferedImage imagen = ImageIO.read(MapaCargado.class.getResource(ruta));
-
 			ancho = imagen.getWidth();
 			alto = imagen.getHeight();
-
 			cuadrosCatalogo = new Cuadro[ancho * alto];
 			pixeles = new int[ancho * alto];
-
 			imagen.getRGB(0, 0, ancho, alto, pixeles, 0, ancho);
-		} catch (IOException e) {
+		}catch(IOException e){
 			e.printStackTrace();
 		}
 	}
-
-	protected void generarMapa() {
-		for (int i = 0; i < pixeles.length; i++) {
-			switch (pixeles[i]) {
-				//PRIMERA COLUMNA DE BASE GRAFICOS
+	protected void generarMapa(){
+		for (int i = 0; i < pixeles.length; i++){
+			switch (pixeles[i]){
 				case 0xff88f7f6: cuadrosCatalogo[i] = Cuadro.SKY_1;
 				  continue;
 				case 0xff60f7f6: cuadrosCatalogo[i] = Cuadro.SKY_2;
@@ -60,8 +52,6 @@ public class MapaCargado extends Mapa {
 				  continue;
 				case 0xff3b0363: cuadrosCatalogo[i] = Cuadro.PURPLE;
 				  continue;
-
-				//SEGUNDA COLUMNA DE BASE GRAFICOS
 				case 0xff036847: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_1;
 				  continue;
 				case 0xff1e6847: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_2;
@@ -86,8 +76,6 @@ public class MapaCargado extends Mapa {
 				  continue;
 				case 0xffbd4247: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_AZ_3;
 				  continue;
-
-				//TERCERA COLUMNA DE BASE GRAFICOS
 				case 0xffbd2147: cuadrosCatalogo[i] = Cuadro.LADO_DARK_1;
 				  continue;
 				case 0xffbd0047: cuadrosCatalogo[i] = Cuadro.LADO_DARK_2;
@@ -105,5 +93,4 @@ public class MapaCargado extends Mapa {
 			}
 		}
 	}
-
 }
