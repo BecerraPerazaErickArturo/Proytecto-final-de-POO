@@ -29,75 +29,77 @@ public class MapaCargado extends Mapa {
 	protected void generarMapa() {
 		for (int i = 0; i < pixeles.length; i++) {
 			switch (pixeles[i]) {
-				case 0xff2f2f2f :
-					cuadrosCatalogo[i] = Cuadro.ASFALTO;
-					continue;
-				case 0xfffff3c3 :
-					cuadrosCatalogo[i] = Cuadro.ARENA;
-					continue;
-				case 0xffbda43e :
-					cuadrosCatalogo[i] = Cuadro.BORDE_CARRETERA_IZQUIERDO;
-					continue;
-				case 0xfff5ce2d :
-					cuadrosCatalogo[i] = Cuadro.BORDE_CARRETERA_DERECHO;
-					continue;
-				case 0xfff9cb09 :
-					cuadrosCatalogo[i] = Cuadro.BORDE_CARRETERA_INFERIOR;
-					continue;
-				case 0xfff9db5c :
-					cuadrosCatalogo[i] = Cuadro.BORDE_CARRETERA_SUPERIOR;
-					continue;
-				case 0xffbfbfbf :
-					cuadrosCatalogo[i] = Cuadro.CENTRO_CARRETERA_VERTICAL;
-					continue;
-				case 0xff94bab7 :
-					cuadrosCatalogo[i] = Cuadro.CENTRO_CARRETERA_HORIZONTAL;
-					continue;
-				case 0xff8f8f8f :
-					cuadrosCatalogo[i] = Cuadro.ESQUINA_CARRETERA_INFERIOR_IZQUIERDA;
-					continue;
-				case 0xffc02a2a :
-					cuadrosCatalogo[i] = Cuadro.ESQUINA_CARRETERA_INFERIOR_DERECHA;
-					continue;
-				case 0xff876565 :
-					cuadrosCatalogo[i] = Cuadro.ESQUINA_CARRETERA_SUPERIOR_IZQUIERDA;
-					continue;
-				case 0xffc74545 :
-					cuadrosCatalogo[i] = Cuadro.ESQUINA_CARRETERA_SUPERIOR_DERECHA;
-					continue;
-				case 0xff434343 :
-					cuadrosCatalogo[i] = Cuadro.PARED_PIEDRA;
-					continue;
-				case 0xff3c3322 :
-					cuadrosCatalogo[i] = Cuadro.PARED_PIEDRA_INFERIOR;
-					continue;
-				case 0xff67593c :
-					cuadrosCatalogo[i] = Cuadro.PARED_PIEDRA_CARRETERA;
-					continue;
-				case 0xffc39c49 :
-					cuadrosCatalogo[i] = Cuadro.PARED_PIEDRA_CARRETERA_X_INVERTIDO;
-					continue;
-				case 0xff523f35 :
-					cuadrosCatalogo[i] = Cuadro.PUERTA_INFERIOR;
-					continue;
-				case 0xff5f3722 :
-					cuadrosCatalogo[i] = Cuadro.PUERTA_INTERMEDIA_IZQUIERDA;
-					continue;
-				case 0xff6b0505 :
-					cuadrosCatalogo[i] = Cuadro.PUERTA_INTERMEDIA_DERECHA;
-					continue;
-				case 0xff602709 :
-					cuadrosCatalogo[i] = Cuadro.PUERTA_SUPERIOR_IZQUIERDA;
-					continue;
-				case 0xffb41010 :
-					cuadrosCatalogo[i] = Cuadro.PUERTA_SUPERIOR_DERECHA;
-					continue;
-				case 0xff3a1400 :
-					cuadrosCatalogo[i] = Cuadro.PUERTA_SUPERIOR_CENTRAL;
-					continue;
-				case 0xff8f3100 :
-					cuadrosCatalogo[i] = Cuadro.OXIDO;
-					continue;
+				//PRIMERA COLUMNA DE BASE GRAFICOS
+				case 0xff88f7f6: cuadrosCatalogo[i] = Cuadro.SKY_1;
+				  continue;
+				case 0xff60f7f6: cuadrosCatalogo[i] = Cuadro.SKY_2;
+				  continue;
+				case 0xff33f7f6: cuadrosCatalogo[i] = Cuadro.SKY_3;
+				  continue;
+				case 0xff00f7f6: cuadrosCatalogo[i] = Cuadro.SKY_4;
+				  continue;
+				case 0xfff825d9: cuadrosCatalogo[i] = Cuadro.CITY_1;
+				  continue;
+				case 0xffd225d9: cuadrosCatalogo[i] = Cuadro.CITY_2;
+				  continue;
+				case 0xffb425d9: cuadrosCatalogo[i] = Cuadro.CITY_3;
+				  continue;
+				case 0xff8125d9: cuadrosCatalogo[i] = Cuadro.CITY_4;
+				  continue;
+				case 0xff6325d9: cuadrosCatalogo[i] = Cuadro.CITY_5;
+				  continue;
+				case 0xff3f25d9: cuadrosCatalogo[i] = Cuadro.CIRCLE_SKY_1;
+				  continue;
+				case 0xff1e25d9: cuadrosCatalogo[i] = Cuadro.CIRCLE_SKY_2;
+				  continue;
+				case 0xff0025d9: cuadrosCatalogo[i] = Cuadro.CIRCLE_SKY_3;
+				  continue;
+				case 0xff0018d9: cuadrosCatalogo[i] = Cuadro.CIRCLE_SKY_4;
+				  continue;
+				case 0xff0018c3: cuadrosCatalogo[i] = Cuadro.SKY;
+				  continue;
+				case 0xff3b0363: cuadrosCatalogo[i] = Cuadro.PURPLE;
+				  continue;
+
+				//SEGUNDA COLUMNA DE BASE GRAFICOS
+				case 0xff036847: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_1;
+				  continue;
+				case 0xff1e6847: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_2;
+				  continue;
+				case 0xff4e6847: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_3;
+				  continue;
+				case 0xff726847: cuadrosCatalogo[i] = Cuadro.ESQUINA_LIGHT_1;
+				  continue;
+				case 0xff9f6847: cuadrosCatalogo[i] = Cuadro.ESQUINA_LIGHT_2;
+				  continue;
+				case 0xffc66847: cuadrosCatalogo[i] = Cuadro.ESQUINA_LIGHT_3;
+				  continue;
+				case 0xffe16847: cuadrosCatalogo[i] = Cuadro.ESQUINA_LIGHT_MOR_1;
+				  continue;
+				case 0xffff6847: cuadrosCatalogo[i] = Cuadro.ESQUINA_LIGHT_MOR_2;
+				  continue;
+				case 0xffff4247: cuadrosCatalogo[i] = Cuadro.ESQUINA_LIGHT_MOR_3;
+				  continue;
+				case 0xffe74247: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_AZ_1;
+				  continue;
+				case 0xffd24247: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_AZ_2;
+				  continue;
+				case 0xffbd4247: cuadrosCatalogo[i] = Cuadro.ESQUINA_DARK_AZ_3;
+				  continue;
+
+				//TERCERA COLUMNA DE BASE GRAFICOS
+				case 0xffbd2147: cuadrosCatalogo[i] = Cuadro.LADO_DARK_1;
+				  continue;
+				case 0xffbd0047: cuadrosCatalogo[i] = Cuadro.LADO_DARK_2;
+				  continue;
+				case 0xffbd0057: cuadrosCatalogo[i] = Cuadro.LADO_LIGHT;
+				  continue;
+				case 0xffbd0072: cuadrosCatalogo[i] = Cuadro.LADO_LIGHT_MOR_1;
+				  continue;
+				case 0xffbd0096: cuadrosCatalogo[i] = Cuadro.LADO_LIGHT_MOR_2;
+				  continue;
+				case 0xffbd00c3: cuadrosCatalogo[i] = Cuadro.LADO_DARK_AZ;
+				  continue;
 				default :
 					cuadrosCatalogo[i] = Cuadro.VACIO;
 			}
