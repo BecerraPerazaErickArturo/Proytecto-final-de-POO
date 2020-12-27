@@ -7,7 +7,8 @@ public class Cuadro {
 	public static final int LADO = 32;
 
 	// Colección de cuadros
-	public static final Cuadro  SKY_1 = new Cuadro(Sprite.SKY_1);
+	public static final Cuadro  VACIO= new Cuadro(Sprite.VACIO);
+	public static final Cuadro  SKY_1= new Cuadro(Sprite.SKY_1);
 	public static final Cuadro  SKY_2= new Cuadro(Sprite.SKY_2);
 	public static final Cuadro  SKY_3= new Cuadro(Sprite.SKY_3);
 	public static final Cuadro  SKY_4= new Cuadro(Sprite.SKY_4);
