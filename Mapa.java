@@ -56,31 +56,51 @@ public abstract class Mapa {
 	}
 	switch (cuadros[x + y * ancho]) {
 	case 0:
-	    return Cuadro.ASFALTO;
+	    return Cuadro.SKY_1;
 	case 1:
-	    return Cuadro.ARENA;
+	    return Cuadro.SKY_2;
 	case 2:
-	    return Cuadro.BORDE_CARRETERA_IZQUIERDO;
+	    return Cuadro.SKY_3;
 	case 3:
-	    return Cuadro.CENTRO_CARRETERA_VERTICAL;
+	    return Cuadro.SKY_4;
 	case 4:
-	    return Cuadro.ESQUINA_CARRETERA_INFERIOR_IZQUIERDA;
+	    return Cuadro.CITY_1;
 	case 5:
-	    return Cuadro.PARED_PIEDRA;
+	    return Cuadro.CITY_2;
 	case 6:
-	    return Cuadro.PARED_PIEDRA_INFERIOR;
+	    return Cuadro.CITY_3;
 	case 7:
-	    return Cuadro.PARED_PIEDRA_CARRETERA;
+	    return Cuadro.CITY_4;
 	case 8:
-	    return Cuadro.PUERTA_SUPERIOR_IZQUIERDA;
+	    return Cuadro.CITY_5;
 	case 9:
-	    return Cuadro.PUERTA_INTERMEDIA_IZQUIERDA;
+	    return Cuadro.CIRCLE_SKY_1;
 	case 10:
-	    return Cuadro.PUERTA_INFERIOR;
+	    return Cuadro.CIRCLE_SKY_2;
 	case 11:
-	    return Cuadro.OXIDO;
+	    return Cuadro.CIRCLE_SKY_3;
 	case 12:
-	    return Cuadro.PUERTA_SUPERIOR_CENTRAL;
+	    return Cuadro.CIRCLE_SKY_4;
+	case 13: return SKY;
+	case 14: return PURPLE;
+	case 15: return ESQUINA_DARK_1;
+	case 16: return ESQUINA_DARK_2;
+	case 17: return ESQUINA_DARK_3;
+	case 18: return ESQUINA_LIGHT_1;
+	case 19: return ESQUINA_LIGHT_2;
+	case 20: return ESQUINA_LIGHT_3;
+	case 21: return ESQUINA_LIGHT_MOR_1;
+	case 22: return ESQUINA_LIGHT_MOR_2;
+	case 23: return ESQUINA_LIGHT_MOR_3;
+	case 24: return ESQUINA_DARK_AZ_1;
+	case 25: return ESQUINA_DARK_AZ_2;
+	case 26: return ESQUINA_DARK_AZ_3;
+	case 27: return LADO_DARK_1;
+	case 28: return LADO_DARK_2;
+	case 29: return LADO_LIGHT;
+	case 30: return LADO_LIGHT_MOR_1;
+	case 31: return LADO_LIGHT_MOR_2;
+	case 32: return LADO_DARK_AZ;
 	default:
 	    return Cuadro.VACIO;
 	}
