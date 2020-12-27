@@ -6,38 +6,53 @@ public class Cuadro {
 
 	public static final int LADO = 32;
 
-	// Colección de cuadros
-	public static final Cuadro VACIO = new Cuadro(Sprite.VACIO);
-	public static final Cuadro ASFALTO = new Cuadro(Sprite.ASFALTO);
-	public static final Cuadro ARENA = new Cuadro(Sprite.ARENA);
-	public static final Cuadro BORDE_CARRETERA_IZQUIERDO = new Cuadro(Sprite.BORDE_CARRETERA_IZQUIERDO);
-	public static final Cuadro BORDE_CARRETERA_DERECHO = new Cuadro(Sprite.BORDE_CARRETERA_DERECHO);
-	public static final Cuadro BORDE_CARRETERA_INFERIOR = new Cuadro(Sprite.BORDE_CARRETERA_INFERIOR);
-	public static final Cuadro BORDE_CARRETERA_SUPERIOR = new Cuadro(Sprite.BORDE_CARRETERA_SUPERIOR);
-	public static final Cuadro CENTRO_CARRETERA_VERTICAL = new Cuadro(Sprite.CENTRO_CARRETERA_VERTICAL);
-	public static final Cuadro CENTRO_CARRETERA_HORIZONTAL = new Cuadro(Sprite.CENTRO_CARRETERA_HORIZONTAL);
-	public static final Cuadro ESQUINA_CARRETERA_INFERIOR_IZQUIERDA = new Cuadro(
-			Sprite.ESQUINA_CARRETERA_INFERIOR_IZQUIERDA);
-	public static final Cuadro ESQUINA_CARRETERA_INFERIOR_DERECHA = new Cuadro(
-			Sprite.ESQUINA_CARRETERA_INFERIOR_DERECHA);
-	public static final Cuadro ESQUINA_CARRETERA_SUPERIOR_IZQUIERDA = new Cuadro(
-			Sprite.ESQUINA_CARRETERA_SUPERIOR_IZQUIERDA);
-	public static final Cuadro ESQUINA_CARRETERA_SUPERIOR_DERECHA = new Cuadro(
-			Sprite.ESQUINA_CARRETERA_SUPERIOR_DERECHA);
-	public static final Cuadro PARED_PIEDRA = new Cuadro(Sprite.PARED_PIEDRA);
-	public static final Cuadro PARED_PIEDRA_INFERIOR = new Cuadro(Sprite.PARED_PIEDRA_INFERIOR);
-	public static final Cuadro PARED_PIEDRA_CARRETERA = new Cuadro(Sprite.PARED_PIEDRA_CARRETERA);
-	public static final Cuadro PARED_PIEDRA_CARRETERA_X_INVERTIDO = new Cuadro(
-			Sprite.PARED_PIEDRA_CARRETERA_X_INVERTIDO);
-	public static final Cuadro PUERTA_SUPERIOR_IZQUIERDA = new Cuadro(Sprite.PUERTA_SUPERIOR_IZQUIERDA);
-	public static final Cuadro PUERTA_SUPERIOR_DERECHA = new Cuadro(Sprite.PUERTA_SUPERIOR_DERECHA);
-	public static final Cuadro PUERTA_INTERMEDIA_IZQUIERDA = new Cuadro(Sprite.PUERTA_INTERMEDIA_IZQUIERDA);
-	public static final Cuadro PUERTA_INTERMEDIA_DERECHA = new Cuadro(Sprite.PUERTA_INTERMEDIA_DERECHA);
-	public static final Cuadro PUERTA_INFERIOR = new Cuadro(Sprite.PUERTA_INFERIOR);
-	public static final Cuadro OXIDO = new Cuadro(Sprite.OXIDO);
-	public static final Cuadro PUERTA_SUPERIOR_CENTRAL = new Cuadro(Sprite.PUERTA_SUPERIOR_CENTRAL);
+	// ColecciÃ³n de cuadros
+	public static final Cuadro  SKY_1 = new Cuadro(Sprite.SKY_1);
+	public static final Cuadro  SKY_2= new Cuadro(Sprite.SKY_2);
+	public static final Cuadro  SKY_3= new Cuadro(Sprite.SKY_3);
+	public static final Cuadro  SKY_4= new Cuadro(Sprite.SKY_4);
 
-	// Fin de la colección de cuadros
+	public static final Cuadro  CITY_1= new Cuadro(Sprite.CITY_1);
+	public static final Cuadro  CITY_2= new Cuadro(Sprite.CITY_2);
+	public static final Cuadro  CITY_3= new Cuadro(Sprite.CITY_3);
+	public static final Cuadro  CITY_4= new Cuadro(Sprite.CITY_4);
+	public static final Cuadro  CITY_5= new Cuadro(Sprite.CITY_5);
+
+	public static final Cuadro  CIRCLE_SKY_1= new Cuadro(Sprite.CIRCLE_SKY_1);
+	public static final Cuadro  CIRCLE_SKY_2= new Cuadro(Sprite.CIRCLE_SKY_2);
+	public static final Cuadro  CIRCLE_SKY_3= new Cuadro(Sprite.CIRCLE_SKY_3);
+	public static final Cuadro  CIRCLE_SKY_4= new Cuadro(Sprite.CIRCLE_SKY_4);
+
+	public static final Cuadro  SKY= new Cuadro(Sprite.SKY);
+	public static final Cuadro  PURPLE= new Cuadro(Sprite.PURPLE);
+
+	public static final Cuadro  ESQUINA_DARK_1= new Cuadro(Sprite.ESQUINA_DARK_1);
+	public static final Cuadro  ESQUINA_DARK_2= new Cuadro(Sprite.ESQUINA_DARK_2);
+	public static final Cuadro  ESQUINA_DARK_3= new Cuadro(Sprite.ESQUINA_DARK_3);
+
+	public static final Cuadro  ESQUINA_LIGHT_1= new Cuadro(Sprite.ESQUINA_LIGHT_1);
+	public static final Cuadro  ESQUINA_LIGHT_2= new Cuadro(Sprite.ESQUINA_LIGHT_2);
+	public static final Cuadro  ESQUINA_LIGHT_3= new Cuadro(Sprite.ESQUINA_LIGHT_3);
+
+	public static final Cuadro  ESQUINA_LIGHT_MOR_1= new Cuadro(Sprite.ESQUINA_LIGHT_MOR_1);
+	public static final Cuadro  ESQUINA_LIGHT_MOR_2= new Cuadro(Sprite.ESQUINA_LIGHT_MOR_2);
+	public static final Cuadro  ESQUINA_LIGHT_MOR_3= new Cuadro(Sprite.ESQUINA_LIGHT_MOR_3);
+
+	public static final Cuadro  ESQUINA_DARK_AZ_1= new Cuadro(Sprite.ESQUINA_DARK_AZ_1);
+	public static final Cuadro  ESQUINA_DARK_AZ_2= new Cuadro(Sprite.ESQUINA_DARK_AZ_2);
+	public static final Cuadro  ESQUINA_DARK_AZ_3= new Cuadro(Sprite.ESQUINA_DARK_AZ_3);
+
+	public static final Cuadro  LADO_DARK_1= new Cuadro(Sprite.LADO_DARK_1);
+	public static final Cuadro  LADO_DARK_2= new Cuadro(Sprite.LADO_DARK_2);
+
+	public static final Cuadro  LADO_LIGHT= new Cuadro(Sprite.LADO_LIGHT);
+
+	public static final Cuadro  LADO_LIGHT_MOR_1= new Cuadro(Sprite.LADO_LIGHT_MOR_1);
+	public static final Cuadro  LADO_LIGHT_MOR_2= new Cuadro(Sprite.LADO_LIGHT_MOR_2);
+
+	public static final Cuadro  LADO_DARK_AZ= new Cuadro(Sprite.LADO_DARK_AZ);
+
+	// Fin de la colecciÃ³n de cuadros
 
 	public Cuadro(Sprite sprite) {
 		this.sprite = sprite;
