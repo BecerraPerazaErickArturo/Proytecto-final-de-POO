@@ -45,7 +45,7 @@ public final class Pantalla{
 					posicionX = 0;
 				}
 				int colorPixelJugador = jugador.obtenSprite().pixeles[x + y * jugador.obtenSprite().obtenLado()];
-				if(colorPixelJugador != 0xffff00ff){
+				if(colorPixelJugador != 0xff02dad8){ //el color del fondo del personaje
 					pixeles[posicionX + posicionY * ancho] = colorPixelJugador;
 				}
 			}
