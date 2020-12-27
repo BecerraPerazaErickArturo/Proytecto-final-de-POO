@@ -14,7 +14,7 @@ public class Juego extends Canvas implements Runnable{
 	private static final int ANCHO = 480;
 	private static final int ALTO = 360;
 	private static volatile boolean enFuncionamiento = false;
-	private static final String NOMBRE = "After-D";
+	private static final String NOMBRE = "Math or Die";
 	private static String CONTADOR_APS = "";
 	private static String CONTADOR_FPS = "";
 	private static int aps = 0;
