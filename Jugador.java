@@ -43,58 +43,58 @@ public class Jugador extends Criatura{
 		}
 		int resto = animacion % 40;
 		if(direccion == 'n'){
-			sprite = Sprite.ARRIBA0;
+			sprite = Sprite.MAGO_ATRAS_1;
 			if(enMovimiento){
 				if(resto > 10 && resto <= 20){
-					sprite = Sprite.ARRIBA1;
+					sprite = Sprite.MAGO_ATRAS_2;
 				}else if(resto > 20 && resto <= 30){
-					sprite = Sprite.ARRIBA0;
+					sprite = Sprite.MAGO_ATRAS_1;
 				}else if(resto > 30){
-					sprite = Sprite.ARRIBA2;
+					sprite = Sprite.MAGO_ATRAS_3;
 				}else{
-					sprite = sprite.ARRIBA0;
+					sprite = sprite.MAGO_ATRAS_1;
 				}
 			}
 		}
 		if(direccion == 's'){
-			sprite = Sprite.ABAJO0;
+			sprite = Sprite.MAGO_FRENTE_1;
 			if(enMovimiento){
 				if(resto > 10 && resto <= 20){
-					sprite = Sprite.ABAJO1;
+					sprite = Sprite.MAGO_FRENTE_2;
 				}else if(resto > 20 && resto <= 30){
-					sprite = Sprite.ABAJO0;
+					sprite = Sprite.MAGO_FRENTE_1;
 				}else if(resto > 30){
-					sprite = Sprite.ABAJO2;
+					sprite = Sprite.MAGO_FRENTE_3;
 				}else{
-					sprite = sprite.ABAJO0;
+					sprite = sprite.MAGO_FRENTE_1;
 				}
 			}
 		}
 		if(direccion == 'o'){
-			sprite = Sprite.IZQUIERDA0;
+			sprite = Sprite.MAGO_IZ_1;
 			if(enMovimiento){
 				if(resto > 10 && resto <= 20){
-					sprite = Sprite.IZQUIERDA1;
+					sprite = Sprite.MAGO_IZ_2;
 				}else if(resto > 20 && resto <= 30){
-					sprite = Sprite.IZQUIERDA0;
+					sprite = Sprite.MAGO_IZ_1;
 				}else if(resto > 30){
-					sprite = Sprite.IZQUIERDA2;
+					sprite = Sprite.MAGO_IZ_3;
 				}else{
-					sprite = sprite.IZQUIERDA0;
+					sprite = sprite.MAGO_IZ_1;
 				}
 			}
 		}
 		if(direccion == 'e'){
-			sprite = Sprite.DERECHA0;
+			sprite = Sprite.MAGO_DER_1;
 			if(enMovimiento){
 				if(resto > 10 && resto <= 20){
-					sprite = Sprite.DERECHA1;
+					sprite = Sprite.MAGO_DER_2;
 				}else if(resto > 20 && resto <= 30){
-					sprite = Sprite.DERECHA0;
+					sprite = Sprite.MAGO_DER_1;
 				}else if(resto > 30){
-					sprite = Sprite.DERECHA2;
+					sprite = Sprite.MAGO_DER_3;
 				}else{
-					sprite = sprite.DERECHA0;
+					sprite = sprite.MAGO_DER_1;
 				}
 			}
 		}
