@@ -1,38 +1,30 @@
-public abstract class Ente {
+public abstract class Ente{
 	protected int x;
 	protected int y;
-
 	private boolean eliminado = false;
-
 	protected Mapa mapa;
-
-	public void actualizar() {
+	public void actualizar(){
+		
 	}
-
-	public void mostrar() {
+	public void mostrar(){
+		
 	}
-
-	public void eliminar() {
+	public void eliminar(){
 		eliminado = true;
 	}
-
-	public int obtenerPosicionX() {
+	public int obtenerPosicionX(){
 		return x;
 	}
-
-	public void modificarPosicionX(int desplazamientoX) {
+	public void modificarPosicionX(int desplazamientoX){
 		x += desplazamientoX;
 	}
-
-	public int obtenerPosicionY() {
+	public int obtenerPosicionY(){
 		return y;
 	}
-
-	public void modificarPosicionY(int desplazamientoY) {
+	public void modificarPosicionY(int desplazamientoY){
 		y += desplazamientoY;
 	}
-
-	public boolean estaEliminado() {
+	public boolean estaEliminado(){
 		return eliminado;
 	}
 }
