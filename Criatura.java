@@ -1,39 +1,35 @@
-public abstract class Criatura extends Ente {
+public abstract class Criatura extends Ente{
 	protected Sprite sprite;
 	protected char direccion = 'n';
 	protected boolean enMovimiento = false;
-
-	public void actualizar() {
+	public void actualizar(){
+		
 	}
-
-	public void mostrar() {
+	public void mostrar(){
+		
 	}
-
-	public void mover(int desplazamientoX, int desplazamientoY) {
-		if (desplazamientoX > 0) {
+	public void mover(int desplazamientoX, int desplazamientoY){
+		if (desplazamientoX > 0){
 			direccion = 'e';
 		}
-		if (desplazamientoX < 0) {
+		if (desplazamientoX < 0){
 			direccion = 'o';
 		}
-		if (desplazamientoY > 0) {
+		if (desplazamientoY > 0){
 			direccion = 's';
 		}
-		if (desplazamientoY < 0) {
+		if (desplazamientoY < 0){
 			direccion = 'n';
 		}
-
-		if (!estaEliminado()) {
+		if (!estaEliminado()){
 			modificarPosicionX(desplazamientoX);
 			modificarPosicionY(desplazamientoY);
 		}
 	}
-
-	private boolean enColision() {
+	private boolean enColision(){
 		return false;
 	}
-
-	public Sprite obtenSprite() {
+	public Sprite obtenSprite(){
 		return sprite;
 	}
 }
