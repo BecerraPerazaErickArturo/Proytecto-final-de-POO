@@ -51,7 +51,7 @@ public abstract class Mapa{
 	case 3: return Cuadro.SKY_4;
 	case 4: return Cuadro.CITY_1;
 	case 5: return Cuadro.CITY_2;
-	case 6: return Cuadro.CITY_3
+	case 6: return Cuadro.CITY_3;
 	case 7: return Cuadro.CITY_4;
 	case 8: return Cuadro.CITY_5;
 	case 9: return Cuadro.CIRCLE_SKY_1;
