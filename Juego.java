@@ -27,13 +27,13 @@ public class Juego extends Canvas implements Runnable{
 	private static Jugador jugador;
 	private static BufferedImage imagen = new BufferedImage(ANCHO, ALTO, BufferedImage.TYPE_INT_RGB);
 	private static int[] pixeles = ((DataBufferInt) imagen.getRaster().getDataBuffer()).getData();
-	private static final ImageIcon icono = new ImageIcon(Juego.class.getResource("C:\\Users\\hp1\\Desktop\\Proyecto\\icono.png"));
+	private static final ImageIcon icono = new ImageIcon(Juego.class.getResource("C:\\Users\\hp1\\Desktop\\Proyecto-main\\icono.png"));
 	private Juego(){
 		setPreferredSize(new Dimension(ANCHO, ALTO));
 		pantalla = new Pantalla(ANCHO, ALTO);
 		teclado = new Teclado();
 		addKeyListener(teclado);
-		mapa = new MapaCargado("C:\\Users\\hp1\\Desktop\\Proyecto\\mapa.png");
+		mapa = new MapaCargado("C:\\Users\\hp1\\Desktop\\Proyecto-main\\mapa.png");
 		jugador = new Jugador(teclado, Sprite.MAGO_FRENTE_1, 225, 225);
 		ventana = new JFrame(NOMBRE);
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
