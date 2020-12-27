@@ -1,3 +1,5 @@
+import java.util.*;
+import java.io.IOException;
 import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Color;
@@ -46,7 +48,7 @@ public class Juego extends Canvas implements Runnable{
 		ventana.setLocationRelativeTo(null);
 		ventana.setVisible(true);
 	}
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException, InterruptedException{
 		Juego juego = new Juego();
 		juego.iniciar();
 	}
