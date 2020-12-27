@@ -4,6 +4,7 @@ public final class Sprite{
 	private int y;
 	public int[] pixeles;
 	private HojaSprites hoja;
+	//coordenadas del personaje
 	public static final Sprite ABAJO0 = new Sprite(32, 0, 0, 0, HojaSprites.jugador);
 	public static final Sprite ABAJO1 = new Sprite(32, 0, 1, 0, HojaSprites.jugador);
 	public static final Sprite ABAJO2 = new Sprite(32, 0, 2, 0, HojaSprites.jugador);
@@ -16,30 +17,56 @@ public final class Sprite{
 	public static final Sprite IZQUIERDA0 = new Sprite(32, 3, 0, 0, HojaSprites.jugador);
 	public static final Sprite IZQUIERDA1 = new Sprite(32, 3, 1, 0, HojaSprites.jugador);
 	public static final Sprite IZQUIERDA2 = new Sprite(32, 3, 2, 0, HojaSprites.jugador);
+	
+	
+	//coordenadas del mapa
 	public static final Sprite VACIO = new Sprite(32, 0);
-	public static final Sprite ASFALTO = new Sprite(32, 0, 0, 0, HojaSprites.desierto);
-	public static final Sprite ARENA = new Sprite(32, 1, 0, 0, HojaSprites.desierto);
-	public static final Sprite BORDE_CARRETERA_IZQUIERDO = new Sprite(32, 2, 0, 0, HojaSprites.desierto);
-	public static final Sprite BORDE_CARRETERA_DERECHO = new Sprite(32, 2, 0, 1, HojaSprites.desierto);
-	public static final Sprite BORDE_CARRETERA_INFERIOR = new Sprite(32, 2, 0, 4, HojaSprites.desierto);
-	public static final Sprite BORDE_CARRETERA_SUPERIOR = new Sprite(32, 2, 0, 5, HojaSprites.desierto);
-	public static final Sprite CENTRO_CARRETERA_VERTICAL = new Sprite(32, 3, 0, 0, HojaSprites.desierto);
-	public static final Sprite CENTRO_CARRETERA_HORIZONTAL = new Sprite(32, 3, 0, 4, HojaSprites.desierto);
-	public static final Sprite ESQUINA_CARRETERA_INFERIOR_IZQUIERDA = new Sprite(32, 4, 0, 0, HojaSprites.desierto);
-	public static final Sprite ESQUINA_CARRETERA_INFERIOR_DERECHA = new Sprite(32, 4, 0, 1, HojaSprites.desierto);
-	public static final Sprite ESQUINA_CARRETERA_SUPERIOR_IZQUIERDA = new Sprite(32, 4, 0, 5, HojaSprites.desierto);
-	public static final Sprite ESQUINA_CARRETERA_SUPERIOR_DERECHA = new Sprite(32, 4, 0, 3, HojaSprites.desierto);
-	public static final Sprite PARED_PIEDRA = new Sprite(32, 5, 0, 0, HojaSprites.desierto);
-	public static final Sprite PARED_PIEDRA_INFERIOR = new Sprite(32, 6, 0, 0, HojaSprites.desierto);
-	public static final Sprite PARED_PIEDRA_CARRETERA = new Sprite(32, 0, 3, 0, HojaSprites.desierto);
-	public static final Sprite PARED_PIEDRA_CARRETERA_X_INVERTIDO = new Sprite(32, 0, 3, 1, HojaSprites.desierto);
-	public static final Sprite PUERTA_SUPERIOR_IZQUIERDA = new Sprite(32, 7, 0, 0, HojaSprites.desierto);
-	public static final Sprite PUERTA_SUPERIOR_DERECHA = new Sprite(32, 7, 0, 1, HojaSprites.desierto);
-	public static final Sprite PUERTA_INTERMEDIA_IZQUIERDA = new Sprite(32, 7, 1, 0, HojaSprites.desierto);
-	public static final Sprite PUERTA_INTERMEDIA_DERECHA = new Sprite(32, 7, 1, 1, HojaSprites.desierto);
-	public static final Sprite PUERTA_INFERIOR = new Sprite(32, 8, 1, 0, HojaSprites.desierto);
-	public static final Sprite OXIDO = new Sprite(32, 9, 0, 0, HojaSprites.desierto);
-	public static final Sprite PUERTA_SUPERIOR_CENTRAL = new Sprite(32, 8, 0, 0, HojaSprites.desierto);
+	public static final Sprite  SKY_1= new Sprite(32, 0, 0,  HojaSprites.BaseGraficos);
+	public static final Sprite  SKY_2= new Sprite(32, 0, 1,  HojaSprites.BaseGraficos);
+	public static final Sprite  SKY_3= new Sprite(32, 0, 2,  HojaSprites.BaseGraficos);
+	public static final Sprite  SKY_4= new Sprite(32, 0, 3,  HojaSprites.BaseGraficos);
+
+	public static final Sprite  CITY_1= new Sprite(32, 0, 4, HojaSprites.BaseGraficos);
+	public static final Sprite  CITY_2= new Sprite(32, 0, 5, HojaSprites.BaseGraficos);
+	public static final Sprite  CITY_3= new Sprite(32, 0, 6, HojaSprites.BaseGraficos);
+	public static final Sprite  CITY_4= new Sprite(32, 0, 7, HojaSprites.BaseGraficos);
+	public static final Sprite  CITY_5= new Sprite(32, 0, 8, HojaSprites.BaseGraficos);
+
+	public static final Sprite  CIRCLE_SKY_1= new Sprite(32, 0, 9, HojaSprites.BaseGraficos);
+	public static final Sprite  CIRCLE_SKY_2= new Sprite(32, 0, 10, HojaSprites.BaseGraficos);
+	public static final Sprite  CIRCLE_SKY_3= new Sprite(32, 0, 11, HojaSprites.BaseGraficos);
+	public static final Sprite  CIRCLE_SKY_4= new Sprite(32, 0, 12, HojaSprites.BaseGraficos);
+
+	public static final Sprite  SKY= new Sprite(32, 0, 13, HojaSprites.BaseGraficos);
+	public static final Sprite  PURPLE= new Sprite(32, 0, 14, HojaSprites.BaseGraficos);
+
+
+	public static final Sprite  ESQUINA_DARK_1= new Sprite(32, 2, 0, HojaSprites.BaseGraficos);
+	public static final Sprite  ESQUINA_DARK_2= new Sprite(32, 2, 1, HojaSprites.BaseGraficos);
+	public static final Sprite  ESQUINA_DARK_3= new Sprite(32, 2, 2, HojaSprites.BaseGraficos);
+
+	public static final Sprite  ESQUINA_LIGHT_1= new Sprite(32, 2, 3, HojaSprites.BaseGraficos);
+	public static final Sprite  ESQUINA_LIGHT_2= new Sprite(32, 2, 4, HojaSprites.BaseGraficos);
+	public static final Sprite  ESQUINA_LIGHT_3= new Sprite(32,  2, 5, HojaSprites.BaseGraficos);
+
+	public static final Sprite  ESQUINA_LIGHT_MOR_1= new Sprite(32, 2, 6, HojaSprites.BaseGraficos);
+	public static final Sprite  ESQUINA_LIGHT_MOR_2= new Sprite(32, 2, 7, HojaSprites.BaseGraficos);
+	public static final Sprite  ESQUINA_LIGHT_MOR_3= new Sprite(32, 2, 8, HojaSprites.BaseGraficos);
+
+	public static final Sprite  ESQUINA_DARK_AZ_1= new Sprite(32, 2, 9, HojaSprites.BaseGraficos);
+	public static final Sprite  ESQUINA_DARK_AZ_2= new Sprite(32, 2, 10, HojaSprites.BaseGraficos);
+	public static final Sprite  ESQUINA_DARK_AZ_3= new Sprite(32, 2, 11, HojaSprites.BaseGraficos);
+
+	public static final Sprite  LADO_DARK_1= new Sprite(32, 4, 0, HojaSprites.BaseGraficos);
+	public static final Sprite  LADO_DARK_2= new Sprite(32, 4, 1, HojaSprites.BaseGraficos);
+
+	public static final Sprite  LADO_LIGHT= new Sprite(32, 4, 2, HojaSprites.BaseGraficos);
+
+	public static final Sprite  LADO_LIGHT_MOR_1= new Sprite(32, 4, 3, HojaSprites.BaseGraficos);
+	public static final Sprite  LADO_LIGHT_MOR_2= new Sprite(32, 4, 4, HojaSprites.BaseGraficos);
+
+	public static final Sprite  LADO_DARK_AZ= new Sprite(32, 4, 5, HojaSprites.BaseGraficos);
+
 	public Sprite(final int lado, final int columna, final int fila, final int version, final HojaSprites hoja){
 		this.lado = lado;
 		pixeles = new int[lado * lado];
