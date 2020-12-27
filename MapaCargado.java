@@ -1,99 +1,107 @@
-//package mapa;
-
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-public class MapaCargado extends Mapa{
+public class MapaCargado extends Mapa {
 
-  private int[] pixeles;
-  
-  public MapaCargado(String ruta){
-    super(ruta);
-  }
-  
-  protected void cargarMapa(String ruta){
-    BufferedImage imagen = ImageIO.read(MapaCargado.class.getResource(ruta));
-    
-    ancho = imagen.getWidth();
-    largo = imagen.getHeight();
-    
-    cuadrosCatalogo = new Cuadro[ancho*largo];
-    pixeles = new int[ancho*largo];
-    
-    imagen.getRGB(0, 0, ancho, alto, pixeles, 0, ancho);
-      
-    } catch (IOException e){
-        e.printStackTrace();
-   }
-  
-  protected void generarMapa(){
-    for(int i=0; i< pixeles.lenght; i++){
-      switch(pixeles[i]){
-          case 0xffbcaffd: cuadrosCatalogo[i] = Cuadro.CITY_UP_1;
-				          continue;
-          case 0xff9448cb: cuadrosCatalogo[i] = Cuadro.PLANTA_OBS_VOLT_1;
-                  continue;
-          case 0xff860334: cuadrosCatalogo[i] = Cuadro.MOON_OBS;
-                  continue;
-          case 0xffe8fd4d: cuadrosCatalogo[i] = Cuadro.PLANTA_OBS_UP_1;
-                  continue;
-          case 0xff9125f8: cuadrosCatalogo[i] = Cuadro.CITY_UP_2;
-                  continue;
-          case 0xffa42ff9: cuadrosCatalogo[i] = Cuadro.PLANTA_OBS_VOLT_2;
-                  continue;
-          case 0xff6806c6: cuadrosCatalogo[i] = Cuadro.CITY_DOWN_1;
-                  continue;
-          case 0xff1eda02: cuadrosCatalogo[i] = Cuadro.PLANTA_OBS_UP_2;
-                  continue;
-          case 0xff5b05ad: cuadrosCatalogo[i] = Cuadro.MOON;
-                  continue;
-          case 0xffa807e9: cuadrosCatalogo[i] = Cuadro.PLANTA_OBS_VOLT_3;
-                  continue;
-          case 0xffb7069d: cuadrosCatalogo[i] = Cuadro.CITY_DOWN_2;
-                  continue;
-          case 0xff4e9943: cuadrosCatalogo[i] = Cuadro.PLANTA_OBS_UP_3;
-                  continue;
-          case 0xff3b3b3b: cuadrosCatalogo[i] = Cuadro.CITY_UP_3;
-                  continue;
-          case 0xffb7069d: cuadrosCatalogo[i] = Cuadro.CITY_DOWN_3;
-                  continue;
-          case 0xff1b048f: cuadrosCatalogo[i] = Cuadro.BLUE;
-                  continue;
-          case 0xfffd4d4f: cuadrosCatalogo[i] = Cuadro.PLANTA_NOR_VOLT_1;
-                  continue;
-          case 0xff262626: cuadrosCatalogo[i] = Cuadro.CITY_UP_4;
-                  continue;
-          case 0xff000000: cuadrosCatalogo[i] = Cuadro.CITY_DOWN_4;
-                  continue;
-          case 0xffd6d6d6: cuadrosCatalogo[i] = Cuadro.CITY_DOWN_5;
-                  continue;
-          case 0xffda7072: cuadrosCatalogo[i] = Cuadro.PLANTA_NOR_VOLT_2;
-                  continue;
-          case 0xfff825d9: cuadrosCatalogo[i] = Cuadro.CITY_UP_5;
-                  continue;
-          case 0xff10e5e3: cuadrosCatalogo[i] = Cuadro.SKY_LIGHT_1;
-                  continue;
-          case 0xff0f0255: cuadrosCatalogo[i] = Cuadro.SKY_DARK_1;
-                  continue;
-          case 0xffc4181a: cuadrosCatalogo[i] = Cuadro.PLANTA_NOR_VOLT_3;
-                  continue;
-          case 0xff0ab805: cuadrosCatalogo[i] = Cuadro.PLANTA_NOR_UP_1;
-                  continue;
-          case 0xff88f7f6: cuadrosCatalogo[i] = Cuadro.SKY_LIGHT_2;
-                  continue;
-          case 0xff4724f9: cuadrosCatalogo[i] = Cuadro.SKY_DARK_2;
-                  continue;
-          case 0xff036847: cuadrosCatalogo[i] = Cuadro.PLANTA_NOR_UP_2;
-                  continue;
-          case 0xfffd8f4d: cuadrosCatalogo[i] = Cuadro.PLANTA_NOR_UP_3;
-                  continue;
-          case 0xff3b0363: cuadrosCatalogo[i] = Cuadro.PURPLE;
-                  continue;
-          default: cuadrosCatalogo[i] = Cuadro.VACIO;//no me acuerdo si esta en minuscula vacio o no
-      
-      }
-    }
-  }
+	private int[] pixeles;
+
+	public MapaCargado(String ruta) {
+		super(ruta);
+	}
+
+	protected void cargarMapa(String ruta) {
+		try {
+			BufferedImage imagen = ImageIO.read(MapaCargado.class.getResource(ruta));
+
+			ancho = imagen.getWidth();
+			alto = imagen.getHeight();
+
+			cuadrosCatalogo = new Cuadro[ancho * alto];
+			pixeles = new int[ancho * alto];
+
+			imagen.getRGB(0, 0, ancho, alto, pixeles, 0, ancho);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	protected void generarMapa() {
+		for (int i = 0; i < pixeles.length; i++) {
+			switch (pixeles[i]) {
+				case 0xff2f2f2f :
+					cuadrosCatalogo[i] = Cuadro.ASFALTO;
+					continue;
+				case 0xfffff3c3 :
+					cuadrosCatalogo[i] = Cuadro.ARENA;
+					continue;
+				case 0xffbda43e :
+					cuadrosCatalogo[i] = Cuadro.BORDE_CARRETERA_IZQUIERDO;
+					continue;
+				case 0xfff5ce2d :
+					cuadrosCatalogo[i] = Cuadro.BORDE_CARRETERA_DERECHO;
+					continue;
+				case 0xfff9cb09 :
+					cuadrosCatalogo[i] = Cuadro.BORDE_CARRETERA_INFERIOR;
+					continue;
+				case 0xfff9db5c :
+					cuadrosCatalogo[i] = Cuadro.BORDE_CARRETERA_SUPERIOR;
+					continue;
+				case 0xffbfbfbf :
+					cuadrosCatalogo[i] = Cuadro.CENTRO_CARRETERA_VERTICAL;
+					continue;
+				case 0xff94bab7 :
+					cuadrosCatalogo[i] = Cuadro.CENTRO_CARRETERA_HORIZONTAL;
+					continue;
+				case 0xff8f8f8f :
+					cuadrosCatalogo[i] = Cuadro.ESQUINA_CARRETERA_INFERIOR_IZQUIERDA;
+					continue;
+				case 0xffc02a2a :
+					cuadrosCatalogo[i] = Cuadro.ESQUINA_CARRETERA_INFERIOR_DERECHA;
+					continue;
+				case 0xff876565 :
+					cuadrosCatalogo[i] = Cuadro.ESQUINA_CARRETERA_SUPERIOR_IZQUIERDA;
+					continue;
+				case 0xffc74545 :
+					cuadrosCatalogo[i] = Cuadro.ESQUINA_CARRETERA_SUPERIOR_DERECHA;
+					continue;
+				case 0xff434343 :
+					cuadrosCatalogo[i] = Cuadro.PARED_PIEDRA;
+					continue;
+				case 0xff3c3322 :
+					cuadrosCatalogo[i] = Cuadro.PARED_PIEDRA_INFERIOR;
+					continue;
+				case 0xff67593c :
+					cuadrosCatalogo[i] = Cuadro.PARED_PIEDRA_CARRETERA;
+					continue;
+				case 0xffc39c49 :
+					cuadrosCatalogo[i] = Cuadro.PARED_PIEDRA_CARRETERA_X_INVERTIDO;
+					continue;
+				case 0xff523f35 :
+					cuadrosCatalogo[i] = Cuadro.PUERTA_INFERIOR;
+					continue;
+				case 0xff5f3722 :
+					cuadrosCatalogo[i] = Cuadro.PUERTA_INTERMEDIA_IZQUIERDA;
+					continue;
+				case 0xff6b0505 :
+					cuadrosCatalogo[i] = Cuadro.PUERTA_INTERMEDIA_DERECHA;
+					continue;
+				case 0xff602709 :
+					cuadrosCatalogo[i] = Cuadro.PUERTA_SUPERIOR_IZQUIERDA;
+					continue;
+				case 0xffb41010 :
+					cuadrosCatalogo[i] = Cuadro.PUERTA_SUPERIOR_DERECHA;
+					continue;
+				case 0xff3a1400 :
+					cuadrosCatalogo[i] = Cuadro.PUERTA_SUPERIOR_CENTRAL;
+					continue;
+				case 0xff8f3100 :
+					cuadrosCatalogo[i] = Cuadro.OXIDO;
+					continue;
+				default :
+					cuadrosCatalogo[i] = Cuadro.VACIO;
+			}
+		}
+	}
 
 }
