@@ -6,11 +6,9 @@ public class HojaSprites{
 	private final int ancho;
 	private final int alto;
 	public final int[] pixeles;
-
-	// Rutas de hojas de sprites, en la ruta se pone un \ cuando hay otro \ devido a que es un caracter especial, de esa froma se indica que hace referencia al caracter
+	
 	public static HojaSprites mapa = new HojaSprites("C:/Users/hp1/Desktop/Proyecto-main/BaseGgraficos.png", 320, 320);
 	public static HojaSprites jugador = new HojaSprites("C:/Users/hp1/Desktop/Proyecto-main/jugador.png", 320, 320);
-	//--------------------------
 	
 	public HojaSprites(final String ruta, final int ancho, final int alto){
 		this.ancho = ancho;
@@ -24,7 +22,7 @@ public class HojaSprites{
 			e.printStackTrace();
 		}
 	}
-	public int obtenAncho(){
+	public int getAncho(){
 		return ancho;
 	}
 }
