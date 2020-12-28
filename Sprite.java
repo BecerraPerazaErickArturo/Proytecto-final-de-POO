@@ -87,7 +87,7 @@ public final class Sprite{
 	private void cargaNormal(){
 		for(int y = 0; y < lado; y++){
 			for(int x = 0; x < lado; x++){
-				pixeles[x + y * lado] = hoja.pixeles[(x + this.x) + (y + this.y) * hoja.obtenAncho()];
+				pixeles[x + y * lado] = hoja.pixeles[(x + this.x) + (y + this.y) * hoja.getAncho()];
 			}
 		}
 	}
@@ -115,7 +115,7 @@ public final class Sprite{
 		int[] pixelesTemporales = new int[lado * lado];
 		for(int y = 0; y < lado; y++){
 			for(int x = 0; x < lado; x++){
-				pixelesTemporales[x + y * lado] = hoja.pixeles[(x + this.x) + (y + this.y) * hoja.obtenAncho()];
+				pixelesTemporales[x + y * lado] = hoja.pixeles[(x + this.x) + (y + this.y) * hoja.getAncho()];
 			}
 		}
 		return pixelesTemporales;
