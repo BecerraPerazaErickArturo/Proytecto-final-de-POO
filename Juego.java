@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import java.io.File;
 
 public class Juego extends Canvas implements Runnable{
 	private static final long serialVersionUID = 1L;
@@ -29,7 +30,11 @@ public class Juego extends Canvas implements Runnable{
 	private static Jugador jugador;
 	private static BufferedImage imagen = new BufferedImage(ANCHO, ALTO, BufferedImage.TYPE_INT_RGB);
 	private static int[] pixeles = ((DataBufferInt) imagen.getRaster().getDataBuffer()).getData();
-	private static final ImageIcon icono = new ImageIcon(Juego.class.getResource("C:\\Users\\hp1\\Desktop\\Proyecto-main\\icono.png"));
+	
+	private File icono = new File("C:\\Users\\hp1\\Desktop\\Proyecto-main\\icono.png");
+	//haber si funciona ;---;
+	//private static final ImageIcon icono = new ImageIcon(Juego.class.getResource("C:\\Users\\hp1\\Desktop\\Proyecto-main\\icono.png"));
+	
 	private Juego(){
 		setPreferredSize(new Dimension(ANCHO, ALTO));
 		pantalla = new Pantalla(ANCHO, ALTO);
