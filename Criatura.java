@@ -29,7 +29,7 @@ public abstract class Criatura extends Ente{
 	private boolean enColision(){
 		return false;
 	}
-	public Sprite obtenSprite(){
+	public Sprite getSprite(){
 		return sprite;
 	}
 }
