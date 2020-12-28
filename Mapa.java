@@ -27,9 +27,9 @@ public abstract class Mapa{
     public void mostrar(final int compensacionX, final int compensacionY, final Pantalla pantalla) {
 	pantalla.estableceDiferencia(compensacionX, compensacionY);
 	int o = compensacionX >> 5;
-	int e = (compensacionX + pantalla.obtenAncho() + Cuadro.LADO) >> 5;
+	int e = (compensacionX + pantalla.getAncho() + Cuadro.LADO) >> 5;
 	int n = compensacionY >> 5;
-	int s = (compensacionY + pantalla.obtenAlto() + Cuadro.LADO) >> 5;
+	int s = (compensacionY + pantalla.getAlto() + Cuadro.LADO) >> 5;
 	for(int y = n; y < s; y++){
 	    for(int x = o; x < e; x++){
 		if(x < 0 || y < 0 || x >= ancho || y >= alto){
@@ -40,7 +40,7 @@ public abstract class Mapa{
 	    }
 	}
     }
-    public Cuadro obtenCuadro(final int x, final int y){
+    public Cuadro getCuadro(final int x, final int y){
 	if(x < 0 || y < 0 || x >= ancho || y >= alto){
 	    return Cuadro.VACIO;
 	}
