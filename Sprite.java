@@ -74,7 +74,7 @@ public final class Sprite{
 			pixeles[i] = color;
 		}
 	}
-	public int obtenLado(){
+	public int getLado(){
 		return lado;
 	}
 	private void cargarSprite(int version){
