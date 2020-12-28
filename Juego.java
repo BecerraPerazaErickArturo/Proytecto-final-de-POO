@@ -84,7 +84,7 @@ public class Juego extends Canvas implements Runnable{
 			createBufferStrategy(3);
 			return;
 		}
-		mapa.mostrar(jugador.obtenerPosicionX() - pantalla.obtenAncho() / 2 + jugador.obtenSprite().obtenLado() / 2, jugador.obtenerPosicionY() - pantalla.obtenAlto() / 2 + jugador.obtenSprite().obtenLado() / 2, pantalla);
+		mapa.mostrar(jugador.getPosicionX() - pantalla.getAncho() / 2 + jugador.getSprite().getLado() / 2, jugador.getPosicionY() - pantalla.getAlto() / 2 + jugador.getSprite().getLado() / 2, pantalla);
 		jugador.mostrar(pantalla);
 		System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.length);
 		Graphics g = estrategia.getDrawGraphics();
@@ -92,8 +92,8 @@ public class Juego extends Canvas implements Runnable{
 		g.setColor(Color.red);
 		g.drawString(CONTADOR_APS, 10, 20);
 		g.drawString(CONTADOR_FPS, 10, 35);
-		g.drawString("X: " + jugador.obtenerPosicionX(), 10, 50);
-		g.drawString("Y: " + jugador.obtenerPosicionY(), 10, 65);
+		g.drawString("X: " + jugador.getPosicionX(), 10, 50);
+		g.drawString("Y: " + jugador.getPosicionY(), 10, 65);
 		g.dispose();
 		estrategia.show();
 		fps++;
