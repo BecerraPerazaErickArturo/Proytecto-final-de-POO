@@ -12,13 +12,13 @@ public abstract class Ente{
 	public void eliminar(){
 		eliminado = true;
 	}
-	public int obtenerPosicionX(){
+	public int getPosicionX(){
 		return x;
 	}
 	public void modificarPosicionX(int desplazamientoX){
 		x += desplazamientoX;
 	}
-	public int obtenerPosicionY(){
+	public int getPosicionY(){
 		return y;
 	}
 	public void modificarPosicionY(int desplazamientoY){
