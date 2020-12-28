@@ -20,54 +20,48 @@ public final class Pantalla{
 	public void mostrarCuadro(int compensacionX, int compensacionY, Cuadro cuadro) {
 		compensacionX -= diferenciaX;
 		compensacionY -= diferenciaY;
-		for (int y = 0; y < cuadro.sprite.obtenLado(); y++) {
+		for (int y = 0; y < cuadro.sprite.getLado(); y++) {
 			int posicionY = y + compensacionY;
-			for (int x = 0; x < cuadro.sprite.obtenLado(); x++) {
+			for (int x = 0; x < cuadro.sprite.getLado(); x++) {
 				int posicionX = x + compensacionX;
-				if (posicionX < -cuadro.sprite.obtenLado() || posicionX >= ancho || posicionY < 0
-						|| posicionY >= alto) {
+				if (posicionX < -cuadro.sprite.getLado() || posicionX >= ancho || posicionY < 0 || posicionY >= alto) {
 					break;
 				}
 				if (posicionX < 0) {
 					posicionX = 0;
 				}
-				pixeles[posicionX + posicionY * ancho] = cuadro.sprite.pixeles[x + y * cuadro.sprite.obtenLado()];
+				pixeles[posicionX + posicionY * ancho] = cuadro.sprite.pixeles[x + y * cuadro.sprite.getLado()];
 			}
 		}
 	}
-
 	public void mostrarJugador(int compensacionX, int compensacionY, Jugador jugador) {
 		compensacionX -= diferenciaX;
 		compensacionY -= diferenciaY;
-		for (int y = 0; y < jugador.getSprite().obtenLado(); y++) {
+		for (int y = 0; y < jugador.getSprite().getLado(); y++) {
 			int posicionY = y + compensacionY;
-			for (int x = 0; x < jugador.getSprite().obtenLado(); x++) {
+			for (int x = 0; x < jugador.getSprite().getLado(); x++) {
 				int posicionX = x + compensacionX;
-				if (posicionX < -jugador.getSprite().obtenLado() || posicionX >= ancho || posicionY < 0
-						|| posicionY >= alto) {
+				if (posicionX < -jugador.getSprite().getLado() || posicionX >= ancho || posicionY < 0 || posicionY >= alto) {
 					break;
 				}
 				if (posicionX < 0) {
 					posicionX = 0;
 				}
-				int colorPixelJugador = jugador.getSprite().pixeles[x + y * jugador.getSprite().obtenLado()];
+				int colorPixelJugador = jugador.getSprite().pixeles[x + y * jugador.getSprite().getLado()];
 				if (colorPixelJugador != 0xff02dad8) { // el color del fondo del personaje
 					pixeles[posicionX + posicionY * ancho] = colorPixelJugador;
 				}
 			}
 		}
 	}
-
 	public void estableceDiferencia(final int diferenciaX, final int diferenciaY) {
 		this.diferenciaX = diferenciaX;
 		this.diferenciaY = diferenciaY;
 	}
-
-	public int obtenAncho() {
+	public int getAncho() {
 		return ancho;
 	}
-
-	public int obtenAlto() {
+	public int getAlto() {
 		return alto;
 	}
 }
